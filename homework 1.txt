@@ -1,0 +1,186 @@
+--------------------------------------------------------------------------------------------------------
+	Introduction to objects, Everything is an Object, Controlling program flow
+--------------------------------------------------------------------------------------------------------
+
+	Questions
+
+1.	What is an Object? What is a class?
+#################Response:
+An object has state, behavior and an identity.
+A class is the general set of instructions and rules that objects
+created from that class will follow.
+A class is a blueprint for an object. A class describes what an object knows and what an object does.
+2.	Which from the following are access specifiers:
+a.	private
+b.	local
+c.	default
+d.	protected
+e.	public
+#################Response: private, default, protected, public
+3.	Are there some differences between Interface and Abstract Class? If yes, enumerate some of them.
+#################Response:
+An abstract class cannot be instantiated into objects.
+An abstract class can have local declared variables.
+An abstract class can have method definitions and implementations.
+An interface defines methods without implementation.
+In an interface, each method is public even when you forget to declare it as public.
+Abstract classes are important when all derived classes should share certain methods.
+4.	Which are the parts of a method?
+#################Response:
+returnType methodName( /* Argument list */ ) { /* Method body */ }
+5.	What is wrong in the following code?
+class Shape {
+ �
+  public int getArea() {
+    �
+  } 
+
+  public double getArea() {
+   �
+  }
+}
+#################Response:
+Nu pot exista metode identice( cu aceeasi parametrii) dar care sa returneze tipuri diferite.
+6.	What javadoc tag is used to describe the method parameters?
+#################Response:
+@param
+7.	Based on operator precedence order the following operator types:
+-	Arithmetic (and shift)
+-	Relational
+-	Conditional (ternary)
+-	Unary
+-	Assignment
+#################Response:
+Unary, Arithmetic, Relational, Conditional , Assignment
+8.	What will be the results of the following code?
+�
+int s = 0;
+for (int i = 0; i < 10; ++i) {
+   s += i; 
+} 
+System.out.println(�Result: � + s);
+#################Response:
+0+1+2+3+4+5+6+7+8+9 = 45
+
+	Problems
+
+1.	Create a switch statement that prints a message for each case, and put the switch inside a for loop that tries each case. Put a break after each case and test it, then remove the breaks and see what happens.
+#################Done -> SwitchStatement
+2.	Write a program to transform a decimal number in a binary one.
+#################Done -> TransformDecToBin
+3.	Write a program to compute all prime numbers less than a given number.
+#################Done -> class ComputeAllPrimeNumbers
+
+
+
+--------------------------------------------------------------------------------------------------------
+	Initialization & cleanup
+--------------------------------------------------------------------------------------------------------
+	Questions:
+
+1.	What is the role of the constructor?
+#################Response:
+A constructor is a special method automatically called when an object is created.
+The constructor is an unusual type of method because it has no return value.
+A public or protected constructor can be used to instantiated a class.
+The constructor can also have arguments to allow you to specify how an object is created( arguments used for the initialization of an object).
+2.	What is the meaning of the default constructor?
+#################Response:
+A default constructor is a constructor that takes no arguments.
+In Java, the class designer can guarantee initialization of every object by providing a constructor.
+If you create a class that has no constructors, the compiler will automatically create a default constructor for you.
+3.	Does the java syntax support constructor overloading?
+#################Response:
+Method overloading it’s a general convenience and can be used with any method.
+Method overloading is a must for constructors, because the constructor’s name is predetermined by the name of the class, there can be only one constructor name.
+4.	How can you distinguish the overloaded methods?
+#################Response:
+Each overloaded method must take a unique list of argument types.
+5.	Find and explain the errors from the following code.
+
+class Person {
+  private String firstName;
+  private String lastName;
+  private int age;
+ 
+  public Person() {
+    System.out.println(�Default constructor�);
+  }
+  public Person(String firstName, String lastName) {
+    System.out.println(�Other constructor�);
+    this();
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  public Person(String firstName, String lastName, int age) {
+    this();
+    this(firstName, lastName);
+    this.age = age;
+  }
+
+  public void print() {
+    this();
+    System.out.println(�First Name:� + this.firstName);
+    System.out.println(�Last Name:� + this.lastName);
+    System.out.println(�Age:� + this.age);
+  } 
+
+  �
+} 
+#################Response: Done.
+6.	When are initialized the static members of a class?
+#################Response:
+Load class -> run all static initializers (static initialization takes place only once)
+Static variables are initialized only once , at the start of the execution .These variables will be initialized first, before the initialization of any instance variables.
+7.	What will be the result of the execution for the following code:
+public class TestOverloading {
+
+  private void print(float f) {
+    System.out.println("Float: " + f);
+  }
+
+  private void print(double d) {
+    System.out.println("Double: " + d);
+  }
+
+  private void print(int i) {
+    System.out.println("Int: " + i);
+  }
+
+  private void print(char c) {
+    System.out.println("Char: " + c);
+  }
+
+  public static void main(String[] args) {
+    float f = 0;
+    TestOverloading t = new TestOverloading();
+    t.print(f);
+    t.print((int) f);
+    t.print((char) f);
+    t.print((double) f);
+  }
+}
+#################Response:
+Float: 0.0
+Int: 0
+Char:
+Double: 0.0
+
+Note:
+t.print( Integer.toString(0).charAt(0));
+8.	When and why should we use finalize() method?
+#################Response:
+When the garbage collector is ready to release the storage used for your object, it will first call finalize( ), and only on the next garbage-collection pass will it reclaim the object’s memory.
+So if you choose to use finalize( ), it gives you the ability to perform some important cleanup at the time of garbage collection.
+For example, if the object represents an open file, that file should be closed by the programmer before the object is garbage collected.
+
+	Problems:
+
+1.	Create a class with two (overloaded) constructors and call the second constructor inside the first one.
+#################Done -> class Person
+2.	Create a class with a static String field that is initialized at the point of definition, and another one that is initialized by the static block. Add a static method that prints both fields.
+#################Done -> class StaticClass, StaticClass2
+Note:
+Static Java fields are located in the class, not in the instances of the class.
+Static blocks are nothing but a normal block of code, enclosed in braces { }, preceded with static keyword. These static blocks will be called when JVM loads the class into memory. Incase a class has multiple static blocks across the class, then JVM combines all these blocks as a single block of code and executes it. Static blocks will be called only once, when it is loaded into memory. These are also called initialization blocks.

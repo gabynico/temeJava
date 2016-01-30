@@ -1,0 +1,418 @@
+-------------------------------------------------------------------------------------------------
+	Interfaces & Inner-Classes
+-------------------------------------------------------------------------------------------------
+
+	Questions
+
+1.	What is the difference between an Interface and an Abstract class?
+Explain when it is best to use Interfaces and when abstract classes.
+#################Response:
+Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods.
+Abstract class and interface both can't be instantiated.
+But there are many differences between abstract class and interface that are given below.
+Abstract class:
+-Abstract class can have abstract and non-abstract methods.
+-Abstract class doesn't support multiple inheritance.
+-Abstract class can have final, non-final, static and non-static variables.
+-Abstract class can have static methods, main method and constructor.
+-Abstract class can provide the implementation of interface.
+-The abstract keyword is used to declare abstract class.
+-Example:
+public abstract class Shape{
+public abstract void draw();
+}
+Interface:
+-Interface can have only abstract methods.
+-Interface supports multiple inheritance.
+-Interface has only static and final variables.
+-Interface can't have static methods, main method or constructor.
+-Interface can't provide the implementation of abstract class.
+-The interface keyword is used to declare interface.
+-Example:
+public interface Drawable{
+void draw();
+}
+
+2.	Write a short code snippet to define a new interface I3 that inherits two existing interfaces I1 and I2.
+What happens if the definitions of the I1 and I2 are:
+public interface I1 {
+  void foo();
+}
+public interface I2 {
+  public void foo();
+}
+
+What about if the two interfaces are:
+public interface I1 {
+  public void foo();
+}
+public interface I2 {
+  public int foo();
+}
+#################Response:
+cazul 1:
+public interface I3  extends I1, I2 {
+    @Override
+    void foo();
+}
+cazul 2:
+'foo()' in 'nico.I3' clashes with 'foo()' in 'nico.I2'; attempting to use incompatible return type
+
+3.	Point any errors in the code snippet below and explain them:
+interface Shape {
+   int getArea();
+   void draw();
+}
+
+public class Tile {
+   private int width = 0, height = 0;
+   int getArea() { return height * width;}
+   void setHeight(int height) { this.height = height; }
+   void setWidth(int width) { this.width = width; }
+}
+
+public class TileShape extends Tile implements Shape {
+   public void draw() {
+     System.out.println(�This a tile with area of: � + this.getArea());
+   }
+   public static void main(String[] args) {
+     TileShape tileShape = new TileShape();
+     tileShape.setHeight(10);
+     tileShape.setWidth(10);
+     Shape shape = tileShape;
+     shape.draw(); 
+   }
+}
+#################Response:
+ in class Tile metoda getArea() trebuie facuta publica pentru a avea acces la ea
+ public int getArea() { return height * width;}
+
+O alta posibilitate ar fi ca in class Tile metoda getArea() sa fie facuta protected, caz in care trebuie suprascrisa in clasa TileShape.
+
+O alta posibilitate ar fi ca in class Tile metoda getArea() sa ramana nemodificata, iar in clasa TileShape sa se implementeze metoda
+getArea() din interfata Shape, dar va returna ce valoare ii spun. In acest caz nu mai are sens codul din main.
+
+4.	What are the access modifiers of the fields and methods inside the interface?
+Is it possible to declare an interface as being static? What about private?
+#################Response:
+An interface cannot contain instance fields.
+The only fields that can appear in an interface must be declared both static and final.
+Methods are abstract and public.
+static interface – no
+private interface - yes. A nested interface can be private. See class ClassWithPrivateNestedInterface.
+
+
+5.	What are the differences between inner classes and nested classes?
+#################Response:
+Nested classes can be further classified into two different types of classes:
+non-static nested classes(inner classes) and static nested classes.
+An inner class instance can access all the members of the outer class, even the ones declared private.
+A static inner class would only have access to the static members of the outer class.
+class Outer  {
+    class InnerClass  {   }
+
+    static class NestedStatic {   }
+}
+
+6.	Provide a short code snippet to define an inner anonymous class:
+a.	That implements a given interface I1 with one method: void f();
+#################Response:
+public interface I11 {
+    void f();
+}
+public class Anonymous1 {
+    I11 i11 = new I11(){
+        public void f(){
+            System.out.println("Anonymous1");
+        }
+    };
+}
+public class Main {
+    public static void main(String[] args) {
+	Anonymous1 an1 =new Anonymous1();
+	an1.i11.f();
+	}
+}
+b.	That extends a given class C1
+#################Response:
+public class C1 {
+        public void print(){
+            System.out.println("C1 - print");
+        }
+}
+public class C11 {
+    /*  This creates an anonymous inner class: */
+    static C1 c1 = new  C1() {
+        public void print() {
+            System.out.println("C2 - anonymous");
+        }
+    };
+
+    public static void main(String[] args) {
+        c1.print();
+    }
+}
+c.	That extends a given class C2 with no default constructor and a constructor with two string parameters.
+#################Response:
+public class C2 {
+
+    C2(int a, int b){
+        System.out.println("C2 - constructor -> a+b =" + a+b);
+    }
+
+    public void print() {
+        System.out.println("C2");
+    }
+}
+public class C22 {
+        /*  This creates an anonymous inner class: */
+        static C2 c2 = new  C2( 1, 2) {
+            public void print() {
+                System.out.println("C2 - anonymous");
+            }
+        };
+
+    public static void main(String[] args) {
+        c2.print();
+    }
+}
+
+7.	Which of the following are true when talking about inner classes (non-anonymous):
+a.	Can be declared inside other inner classes
+b.	Can be declared inside methods and blocks of code
+c.	Can access private members from the outer class(es)
+d.	Can have more than one constructor
+e.	Defines an IS-A relationship between the outer and the inner class
+f.	Can be further extended by other classes
+#################Response:
+a.	Yes
+b.	Yes
+c.	No
+d.	Yes
+e.	No
+f.	No
+
+8.	Given the code below, how can you access from the method f() the x member of the outer class?
+�
+public class A {
+  private int x = 10;
+  private class B {
+    private int x = 20;
+    public void f() {
+      System.out.println(x);
+    }
+  } 
+} 
+#################Response:
+public class AA {
+    private static int x = 10;
+
+    private static class B {
+        private int x = 20;
+        public void f() {
+            System.out.println(AA.x);
+        }
+    }
+
+    public static void main(String[] args) {
+        AA.B a = new AA.B();
+        a.f();
+    }
+}
+
+9.	Given the following interface definition:
+
+public interface I1 {
+  public interface I2 {
+     void f2();
+  }
+  public void f1();
+}
+
+Which of the following definitions are correct (and explain) ?
+1.
+public class A implements I1 {
+
+  public void f1() {};
+}
+
+2.
+public class A implements I1 {
+  public class A2 implements I2 {
+     void f2() {};
+  }
+  public void f1() {};
+}
+
+3.
+public class A2 implements I2 {
+  public void f2() {}
+}
+
+4.
+public class A2 implements I1.I2 {
+  void f2();
+} 
+#################Response:
+1. Correct
+2. Incorrect
+3. Incorrect
+4. Incorrect
+
+10.	Given the following class, how can you create a new instance of the classes A and B in the main method():
+
+public class Test {
+   class A {
+   }
+   static class B {
+   }
+}
+class MyTest {
+   public static void main(String[] args) {
+   }
+}
+#################Response:
+create a new instance of the class A -> Nu se poate
+create a new instance of the class B -> Test.B b = new Test.B();
+
+	Problems
+
+1.	Modify the class below (using an inner class) to allow using it as an Iterator (make an example call of the method foo). 
+public interface Iterator {
+  boolean hasNext();
+  Object next();
+}
+public class Map {
+  private String[] directions = {�North�, �East�, �South�, �West�};
+}
+�
+public void foo(Iterator it) {
+ // �
+}
+#################Done -> interface Iterator, class Map
+
+
+2.	Given the CDPlayer class with the definition below, extend the CDPlayer class and add the necessary changes so it can be used as iterator.
+(hint: create a method inside the derived class that returns an Iterator and uses an anonymous inner class do to this)
+public interface Iterator {
+  boolean hasNext();
+  Object next();
+}
+public class CDPlayer {
+  private String[] tracks = {�Track 1�, �Track 2�, �Track 3�};
+  private int currentTrack;
+
+  public void next() { //� }
+  public void play() { //� }
+  public void stop() { //� }
+  public void prev() { //� }
+}
+public void foo(Iterator it) {
+ // �
+}
+#################Done ->interface Iterator, class CDPlayer
+
+
+-------------------------------------------------------------------------------------------------
+	Error handling with exceptions
+-------------------------------------------------------------------------------------------------
+
+	Questions:
+
+1.	What information you can print about an exception?
+#################Response:
+Exceptions Methods:
+- public String getMessage() -> Returns a detailed message about the exception that has occurred.
+  This message is initialized in the Throwable constructor.
+- public Throwable getCause() -> Returns the cause of the exception as represented by a Throwable object.
+- public String toString() -> Returns the name of the class concatenated with the result of getMessage()
+- public void printStackTrace() -> Prints the result of toString() along with the stack trace to System.err, the error output stream.
+- public StackTraceElement [] getStackTrace() -> Returns an array containing each element on the stack trace.
+  The element at index 0 represents the top of the call stack, and the last element in the array represents the method at the bottom of the call stack.
+- public Throwable fillInStackTrace() -> Fills the stack trace of this Throwable object with the current stack trace, adding to any previous information in the stack trace.
+
+2.	What is the class name of the standard Java exception that does not have to be handled?
+#################Response:
+Throwable class
+
+3.	What is the exception restriction related to method overriding? Do constructors have the same restriction? Why?
+#################Response:
+
+4.	
+a.	Is the exception specification part of the method signature? Prove your answer by writing a small piece of code to justify your answer;
+comment your proof.
+b.	Which parts of the method declaration go in the method signature?
+#################Response:
+
+5.	Knowing that 
+System.out.print does not throw any exception, consider the following of code:
+
+  private static int getI() {
+    int i = 0;
+    try {
+      System.out.println("i is " + ++i);
+      i++;
+      try {
+        throw new Exception("Now i is " + i++);
+      }
+      catch (Throwable t) {
+        i++;
+      }
+    }
+    finally {
+      System.out.println("finally i is " + i++);
+      return i++;
+    }
+  }
+What strings are printed to the console, and what is value getI() returns?
+#################Response:
+    i is 1
+    finally i is 4
+    5
+
+	Problems
+
+1.	Follow the steps below to create a small Java program with 2 classes:
+a.	create a class RandomPlay with a method that generates two random numbers between 1 and 10
+(see java.lang.Math.random() for generating random numbers)
+b.	if the difference of the 2 numbers is higher than 3, throw an exception you�ll specially define for this case
+c.	add a main() method to class RandomPlay that repeatedly calls the first method until it throws no exception
+d.	exit the program by printing the number of times the first method threw your exception
+#################Done -> class RandomPlay
+
+2.	Consider the following class definitions:
+
+public class Exception1 extends Exception {}
+public class Exception2 extends Exception {}
+
+and method:
+	
+public throwException() throws Exception1, Exception2 {
+	    // method body not shown
+	}
+
+and the following 2 blocks of code:
+block1:
+
+try {
+    throwException();
+}
+catch (Exception1 e) {
+    System.err.println("Caught Exception1");
+}
+catch (Exception2 e) {
+    System.err.println("Caught Exception2");
+}
+
+block2:
+try {
+    throwException();
+}
+catch (Exception e) {
+    // write your code here
+}
+
+Replace the commented line in block 2 with your code so that block 2 has the same functionality as block 1.
+#################Done -> class ExceptionMain
+
+
