@@ -5,26 +5,39 @@ package homework3;
  */
 public class CDPlayerExtended extends CDPlayer {
 
-    public void next() {  }
-    public void play() {  }
-    public void stop() {  }
-    public void prev() {  }
-
     public void foo(Iterator it) {
-
+        while(it.hasNext()){
+            System.out.println("The next track is: " + it.next());
+        }
     }
 
-    public Iterator retIterator( CDPlayer cdPlayer) {
+    public static Iterator retIterator(CDPlayer cdPlayer) {
+
         return new Iterator() {
+            private int cnt = 4;
+            private int currentIndex = 0;
+
             @Override
             public boolean hasNext() {
-                return false;
+                if (currentIndex < cnt ) {
+                    return true;
+                }else{
+                    return false;
+                }
             }
 
             @Override
             public Object next() {
-                return null;
+                return currentIndex++;
             }
         };
     }
+
+    public static void main(String[] args) {
+
+        CDPlayerExtended c = new CDPlayerExtended();
+        CDPlayer cdPlayer = new CDPlayer();
+        c.foo(retIterator(cdPlayer));
+    }
+
 }

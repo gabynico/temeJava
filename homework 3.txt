@@ -310,7 +310,7 @@ public class CDPlayer {
 public void foo(Iterator it) {
  // �
 }
-#################Done ->interface Iterator, class CDPlayer
+#################Done ->interface Iterator, class CDPlayer, CDPlayerExtended
 
 
 -------------------------------------------------------------------------------------------------
@@ -337,12 +337,40 @@ Throwable class
 
 3.	What is the exception restriction related to method overriding? Do constructors have the same restriction? Why?
 #################Response:
+The overriding method must not throw new or broader checked exceptions.
+Constructors cannot be overridden.
 
 4.	
 a.	Is the exception specification part of the method signature? Prove your answer by writing a small piece of code to justify your answer;
 comment your proof.
 b.	Which parts of the method declaration go in the method signature?
 #################Response:
+4a. No
+public interface MethodExceptionSpecification {
+    void m(int i, int j) ;
+}
+public class MethodExceptionSpecification2 implements MethodExceptionSpecification {
+    @Override
+    public void m(int i, int j) throws ArithmeticException{
+        try {
+            System.out.println(i / j);
+        }catch(Exception e){
+            throw e;
+        }
+    }
+
+    public static void main(String[] args) {
+        MethodExceptionSpecification2 s = new MethodExceptionSpecification2();
+        try{
+        s.m(5, 0);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+4b.Tot in afara de exception specification si de body.
+
+
 
 5.	Knowing that 
 System.out.print does not throw any exception, consider the following of code:
@@ -414,5 +442,3 @@ catch (Exception e) {
 
 Replace the commented line in block 2 with your code so that block 2 has the same functionality as block 1.
 #################Done -> class ExceptionMain
-
-test github

@@ -25,7 +25,7 @@ public class ExceptionMain {
         }
         catch (Exception e) {
             // write your code here
-
+            System.err.println("Caught Exception");
         }
 
     }
