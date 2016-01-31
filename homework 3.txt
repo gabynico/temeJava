@@ -32,7 +32,8 @@ Interface:
 public interface Drawable{
 void draw();
 }
-
+[ZP]
+10
 2.	Write a short code snippet to define a new interface I3 that inherits two existing interfaces I1 and I2.
 What happens if the definitions of the I1 and I2 are:
 public interface I1 {
@@ -57,6 +58,9 @@ public interface I3  extends I1, I2 {
 }
 cazul 2:
 'foo()' in 'nico.I3' clashes with 'foo()' in 'nico.I2'; attempting to use incompatible return type
+
+[ZP]
+10
 
 3.	Point any errors in the code snippet below and explain them:
 interface Shape {
@@ -91,7 +95,8 @@ O alta posibilitate ar fi ca in class Tile metoda getArea() sa fie facuta protec
 
 O alta posibilitate ar fi ca in class Tile metoda getArea() sa ramana nemodificata, iar in clasa TileShape sa se implementeze metoda
 getArea() din interfata Shape, dar va returna ce valoare ii spun. In acest caz nu mai are sens codul din main.
-
+[ZP]
+10
 4.	What are the access modifiers of the fields and methods inside the interface?
 Is it possible to declare an interface as being static? What about private?
 #################Response:
@@ -101,7 +106,8 @@ Methods are abstract and public.
 static interface – no
 private interface - yes. A nested interface can be private. See class ClassWithPrivateNestedInterface.
 
-
+[ZP] - inner interface can be static too
+9
 5.	What are the differences between inner classes and nested classes?
 #################Response:
 Nested classes can be further classified into two different types of classes:
@@ -113,7 +119,8 @@ class Outer  {
 
     static class NestedStatic {   }
 }
-
+[ZP]
+10
 6.	Provide a short code snippet to define an inner anonymous class:
 a.	That implements a given interface I1 with one method: void f();
 #################Response:
@@ -176,6 +183,8 @@ public class C22 {
         c2.print();
     }
 }
+[ZP] 
+10
 
 7.	Which of the following are true when talking about inner classes (non-anonymous):
 a.	Can be declared inside other inner classes
@@ -187,10 +196,11 @@ f.	Can be further extended by other classes
 #################Response:
 a.	Yes
 b.	Yes
-c.	No
+c.	No [ZP] Yes
 d.	Yes
 e.	No
-f.	No
+f.	No [ZP] Yes
+[ZP] 7
 
 8.	Given the code below, how can you access from the method f() the x member of the outer class?
 �
@@ -219,6 +229,8 @@ public class AA {
         a.f();
     }
 }
+[ZP] A.this.x
+0
 
 9.	Given the following interface definition:
 
@@ -254,11 +266,12 @@ public class A2 implements I1.I2 {
   void f2();
 } 
 #################Response:
-1. Correct
-2. Incorrect
-3. Incorrect
-4. Incorrect
-
+1. Correct [ZP] why
+2. Incorrect [ZP] why
+3. Incorrect [ZP] why
+4. Incorrect [ZP] why
+[ZP] 
+3
 10.	Given the following class, how can you create a new instance of the classes A and B in the main method():
 
 public class Test {
@@ -274,7 +287,8 @@ class MyTest {
 #################Response:
 create a new instance of the class A -> Nu se poate
 create a new instance of the class B -> Test.B b = new Test.B();
-
+[ZP] new Test().new A();
+5 
 	Problems
 
 1.	Modify the class below (using an inner class) to allow using it as an Iterator (make an example call of the method foo). 
@@ -330,15 +344,20 @@ Exceptions Methods:
 - public StackTraceElement [] getStackTrace() -> Returns an array containing each element on the stack trace.
   The element at index 0 represents the top of the call stack, and the last element in the array represents the method at the bottom of the call stack.
 - public Throwable fillInStackTrace() -> Fills the stack trace of this Throwable object with the current stack trace, adding to any previous information in the stack trace.
+[ZP]
+10
 
 2.	What is the class name of the standard Java exception that does not have to be handled?
 #################Response:
 Throwable class
-
+[ZP] RuntimeException
+0
 3.	What is the exception restriction related to method overriding? Do constructors have the same restriction? Why?
 #################Response:
 The overriding method must not throw new or broader checked exceptions.
 Constructors cannot be overridden.
+[ZP]
+10
 
 4.	
 a.	Is the exception specification part of the method signature? Prove your answer by writing a small piece of code to justify your answer;
@@ -370,7 +389,8 @@ public class MethodExceptionSpecification2 implements MethodExceptionSpecificati
 }
 4b.Tot in afara de exception specification si de body.
 
-
+[ZP]
+10
 
 5.	Knowing that 
 System.out.print does not throw any exception, consider the following of code:
@@ -397,7 +417,8 @@ What strings are printed to the console, and what is value getI() returns?
     i is 1
     finally i is 4
     5
-
+[ZP]
+10
 	Problems
 
 1.	Follow the steps below to create a small Java program with 2 classes:

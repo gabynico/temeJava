@@ -6,32 +6,43 @@
 1.	Which are the possible ways to reuse a class?
 #################Response:
 inheritance
+[ZP]: & composition
+5
 2.	Consider having class A, class B extends A and class C extends B. Now create an object of class C. Which is the order the constructors are called?
 #################Response:
 A, B, C
+[ZP] Object->A->B->C
+0
 3.	How can you call the constructor from the base class in a derived class constructor? When can you do that?
 #################Response:
 supper();
 on the first line, before any other instructions
+[ZP] super([args...]);
+8
 4.	What would you use to build up an electronic document with text and images � composition or inheritance?
 But to model a Word document, an Excel spreadsheet and an HTML page?
 #################Response:
 is-a -> inheritance -> to model a Word document, an Excel spreadsheet and an HTML page
 is-like-a relationships -> composition ->  electronic document with text and images
-
+[ZP] is-a, is-like-a - both are inheritance, has-a - composition
+9
 5.	How can you make a member private for normal clients and still visible for derived classes?
 #################Response:
 Using protected keyword.
+[ZP]
+10
 6.	Can you change the value of a final object argument? For example, if a method takes a final List argument, can you call clear on it?
 #################Response:
 No.
+[ZP] Yes, Try it.
+0
 7.	Are the methods of a final class also final?
 #################Response:
 Yes.
-
+[ZP]
+10
 	Problems
 
-1.	Write a test program to demonstrate the answer to question 6.
 #################Done -> class ReusingClasses_problem_1
 2.	Take the file Cartoon.java and comment out the constructor for the Cartoon class. Explain what happens.
 Deoarece class Cartoon extends Drawing, iar class Drawing extends Art initial(pana la comentare cod) se apelau
@@ -60,13 +71,20 @@ and a single piece of code to work on all those different types equally.
 The polymorphic method call allows one type to express its distinction from another,
 similar type, as long as they’re both derived from the same base type.
 This distinction is expressed through differences in behavior of the methods that you can call through the base class.
+[ZP]
+8
+
 2.	What is binding? Classify method binding.
 #################Response:
 Binding is process used to link which method or variable to be called as result of there reference in code.
 Static and dynamic binding.
+[ZP] 
+10
 3.	Which methods can not be overridden?
 #################Response:
 final
+[ZP] & static
+5
 4.	Which is the result of the following code? Explain the result.
 class A {
   public void whoAmI() {
@@ -89,11 +107,13 @@ public static void main(String[] args) {
 I am class: A
 Metoda whoAmI() va folosii getName() din clasa in care este definita metoda.
 Daca metoda whoAmI() ar fi fost suprascrisa in clasa B atunci s-ar fi folosit metoda getName() din clasa B.
-
+[ZP]
+10
 5.	Why is not recommended to call methods inside constructors?
 #################Response:
 We could call a method on a half-initialized object. 
-
+[ZP]
+10
 6.	What is wrong in the following code:
 class A {
   private Integer i = new Integer(0);
@@ -130,7 +150,8 @@ class B {
 Metodele trebuie sa aiba un tip de data pe care sa-l returneze sau in cazul in care nu returneaza nimic tipul void.
 Este incalcata regula:”Is not recommended to call methods inside constructors.”
 In exemplu de mai sus obiectul este initializat inainte de apelul metodei din constructor.
-
+[ZP] A a = new B() will throw a NullPointerException.
+5
 	Problems:
 
 1.	Create an abstract class with no methods. Derive a class and add a method. Create a static method that takes a reference to the base class, downcasts it to the derived class, and calls the method. In main( ), demonstrate that it works. Now put the abstract declaration for the method in the base class, thus eliminating the need for the downcast.
