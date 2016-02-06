@@ -30,7 +30,8 @@ Message: Cannot rezolve symbol...
 5.      Can you call a method declared with a type List<Object> with a parameter of type List<String>?
 If not, how can you make the call legal?
 #################Response:
-
+No. See class GenericsQ5.
+'meth(java.util.List<java.lang.Object>)' in 'homework6.GenericsQ5' cannot be applied to '(java.util.List<java.lang.String>)'
 
 6.      If you use wildcards, can you modify the parameter inside the method call? Why?
 #################Response:

@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fe18b0e-693f-42d2-a87e-652e800a183b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ClassCircle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ClassLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ClassPoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ClassShape.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ClassTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ComplexNumber.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/MyObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/ReadOnlyClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/StringUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework4/UnknownClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/ArrayListsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/BigObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/CorrectSoftRef.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/Country.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/EnumerationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/PassingArrayToMethod.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/SortedSetComparatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/publish_subscribe/PublisherClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/publish_subscribe/PublisherInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/publish_subscribe/PublisherSubscriberTestClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/publish_subscribe/SubscriberClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework5/publish_subscribe/SubscriberInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/teme/homework3/A1.class" afterPath="$PROJECT_DIR$/out/production/teme/homework3/A1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework6/GenericsQ5.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework6/WrapperGeneric.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homework 2.txt" afterPath="$PROJECT_DIR$/homework 2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homework 4.txt" afterPath="$PROJECT_DIR$/homework 4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homework 5.txt" afterPath="$PROJECT_DIR$/homework 5.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homework 6.txt" afterPath="$PROJECT_DIR$/homework 6.txt" />
     </list>
     <ignored path="teme.iws" />
@@ -54,8 +30,78 @@
       <file leaf-file-name="homework 6.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework 6.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.5810184">
-              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.6087963">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenericsQ5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework6/GenericsQ5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="5" selection-start-line="9" selection-start-column="0" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectionGenerics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework6/CollectionGenerics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Collection1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework6/Collection1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Generics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework6/Generics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrapperGeneric.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework6/WrapperGeneric.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#145#146#0" expanded="true" />
+                <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#394#402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BubbleSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework6/BubbleSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,9 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/homework6/BubbleSort.java" />
-        <option value="$PROJECT_DIR$/src/homework4/Shape.java" />
-        <option value="$PROJECT_DIR$/src/homework4/Test3.java" />
         <option value="$PROJECT_DIR$/src/homework4/Test4.java" />
         <option value="$PROJECT_DIR$/homework 2.txt" />
         <option value="$PROJECT_DIR$/src/homework4/StringUtil.java" />
@@ -143,7 +186,10 @@
         <option value="$PROJECT_DIR$/src/homework5/Country.java" />
         <option value="$PROJECT_DIR$/homework 5.txt" />
         <option value="$PROJECT_DIR$/src/homework5/SortedSetComparatorTest.java" />
+        <option value="$PROJECT_DIR$/src/homework6/WrapperGeneric.java" />
+        <option value="$PROJECT_DIR$/src/homework6/GenericsQ5.java" />
         <option value="$PROJECT_DIR$/homework 6.txt" />
+        <option value="$PROJECT_DIR$/src/homework6/GenericsQ5_OK.java" />
       </list>
     </option>
   </component>
@@ -197,6 +243,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -206,21 +284,21 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="39" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="37" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="56" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="52" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="57" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="52" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="530" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="474" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="56" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="52" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="55" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="51" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="56" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="52" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="515" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="460" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
@@ -228,27 +306,7 @@
       <recent name="homework5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SortedSetComparatorTest">
-    <configuration default="false" name="PassingArrayToMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="homework5.publish_subscribe.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="homework5.PassingArrayToMethod" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="teme" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.GenericsQ5">
     <configuration default="false" name="EnumerationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -317,6 +375,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="homework5.SortedSetComparatorTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="teme" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GenericsQ5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="homework6.GenericsQ5" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -574,19 +652,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.PassingArrayToMethod" />
-      <item index="1" class="java.lang.String" itemvalue="Application.EnumerationTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ArrayListsTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.PublisherSubscriberTestClass" />
-      <item index="4" class="java.lang.String" itemvalue="Application.SortedSetComparatorTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.EnumerationTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ArrayListsTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PublisherSubscriberTestClass" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SortedSetComparatorTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.GenericsQ5" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.SortedSetComparatorTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PublisherSubscriberTestClass" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ArrayListsTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.EnumerationTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.PassingArrayToMethod" />
+        <item index="0" class="java.lang.String" itemvalue="Application.GenericsQ5" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SortedSetComparatorTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PublisherSubscriberTestClass" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ArrayListsTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.EnumerationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -614,19 +692,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4215017" sideWeight="0.46747354" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21501707" sideWeight="0.3540091" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21501707" sideWeight="0.35779122" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33047736" sideWeight="0.49167824" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21501707" sideWeight="0.6459909" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.48865354" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21501707" sideWeight="0.64220876" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06051437" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -682,45 +760,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/homework6/CollectionGenerics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homework6/Sink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.974">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.332">
-          <caret line="70" column="58" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.578">
           <caret line="105" column="41" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homework6/BubbleSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1097,9 +1140,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#416#427#0" expanded="true" />
-            <element signature="e#743#754#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#416#427#0" expanded="false" />
+            <element signature="e#743#754#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1109,7 +1152,7 @@
         <state vertical-scroll-proportion="0.03935185">
           <caret line="10" column="27" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1119,7 +1162,7 @@
         <state vertical-scroll-proportion="0.7337963">
           <caret line="24" column="5" selection-start-line="10" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1183,10 +1226,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework6/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework6/WrapperGeneric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#394#402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework6/CollectionGenerics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework6/Collection1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework6/Generics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework6/GenericsQ5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="5" selection-start-line="9" selection-start-column="0" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/homework 6.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.5810184">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.6087963">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding />
         </state>
       </provider>
