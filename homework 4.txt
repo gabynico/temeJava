@@ -57,10 +57,13 @@ run(line);
 #################Response:
 Yes
 See class Test4
+see class UnknownClass:
+    privateReturnVal = (String) privateMethod.invoke(obj, null);
 
 	Problems:
 
-1.	Write a very simple graphical editor that allows you to draw objects deriving from the Shape class. Read the available classes of shapes from a configuration file, and present to the user a simple menu that allows him to select the shape to be drawn. 
+1.	Write a very simple graphical editor that allows you to draw objects deriving from the Shape class. Read the available classes of shapes
+from a configuration file, and present to the user a simple menu that allows him to select the shape to be drawn.
 public interface Shape {
   String draw();
   String getName();
@@ -78,15 +81,14 @@ public class Unknown {
     this.hidden = i + 1;
   }
 }
-#################Done ->
+#################Done -> class UnknownClass
 
 
 
 3.	Write a test program using reflection to print out the value of the hidden attribute after an instance of the Unknown class has been created
 in the previous exercise. If you have succeeded, try to double the value of the hidden attribute of this instance.
 Hint: check-out the java.lang.reflect package.
-#################Done ->
-
+#################Done -> class UnknownClass
 
 
 -----------------------------------------------------------------------------------------------------
@@ -97,21 +99,61 @@ Hint: check-out the java.lang.reflect package.
 
 1.	What is aliasing? Are there possible problems with aliasing? 
 #################Response:
-
+When you make an assignment to an object variable, you are assigning a reference to an object.
+It is possible to have multiple variables that refer to the same object.
+it's called aliasing.
+Code that involves aliasing can get confusing fast, and it can be very difficult to debug.
+In general, aliasing should be avoided or used with care.
 
 
 2.	How do you send a message to an object?
 #################Response:
-
+Message Class
 
 
 3.	What �pass by value� means? Explain how passing arguments works in Java.
 #################Response:
+Java passes everything by value, and not by reference.
+When passing an argument (or even multiple arguments) to a method,
+Java will create a copy or copies of the values inside the original variable(s)
+and pass that to the method as arguments – and that is why it is called pass by value.
+The key with pass by value is that the method will not receive the actual variable that is being passed –
+but just a copy of the value being stored inside the variable.
 
 
 
 4.	What is the difference between shallow copy and deep copy?
 #################Response:
+Java provide one interface called Cloneable, which is a marker interface and by implementing this interface
+we can make duplicate copy of our object by calling clone() method of  java.lang.Object class.
+By default any clone() method gives shallow copy of the object i.e. if we invoke super. clone() then it’s a shallow copy
+but if we want to deep copy we have to override the clone() method and make it public and give own definition of making copy of object.
+
+Shallow Copy
+Whenever we use default implementation of clone method we get shallow copy of object means it create new instance and copy all the field of object
+to that new instance
+and return it as object type we need to explicitly cast it back to our original object.
+This is shallow copy of the object. clone() method of the object class support shallow copy of the object.
+If the object contains primitive as well as non primitive or reference type variable In  shallow copy,
+the cloned object also refers to the same object to which the original object refers as only the object references gets copied
+and not the referred objects themselves.
+
+Deep Copy
+Whenever we need own meaning of copy not to use default implementation we call it as deep copy,
+whenever we need deep copy of the object we need to implement according to our need.
+So for deep copy we need to ensure all the member class also implement the Cloneable interface and override the clone() method of the object class.
+
+Difference between Shallow and Deep Copy
+-  When we call Object.clone(), this method performs a shallow copy of object, by copying data field by field,
+and if we override this method and by convention first call super.clone(), and then modify some fields to "deep" copy,
+then we get deep copy of object. This modification is done to ensure that original and cloned object are independent to each other.
+- In shallow copy main or parent object is copied, but they share same fields or children if fields are modified in one parent object
+other parent fields have automatic same changes occur,but in deep copy this is not the case.
+- If our parent object contains only primitive value then shallow copy is good for making clone of any object because in new object value is copied
+but if parent object contains any other object then only reference value is copied in new parent object and both will point to same object
+so in that case according to our need we can go for deep copy.
+- Deep copy is expensive as compare to shallow copy in terms of object creation, because it involves recursive copying of data from other mutable objects,
+which is part of original object.
 
 
 
@@ -129,23 +171,44 @@ public String toString() {
 } 
 }
 #################Response:
-
+see class MyObject
 
 
 6.	How many methods has the Cloneable interface? What are the reasons of this interface existence? -
 #################Response:
-
+Nici o metoda.
+The Cloneable interface defines no members. It is used to indicate that a class allows a bitwise copy of an object (that is, a clone)
+to be made.
+If you try to call clone( ) on a class that does not implement Cloneable, a CloneNotSupportedException is thrown.
+ When a clone is made, the constructor for the object being cloned is not called. A clone is simply an exact copy of the original.
 
 
 7.	Is C++ special keyword const available in Java? 
 #################Response:
+Yes.
+"const" is a reserved word, but it has no function in Java. You cannot use it.
+The most likely reason why it's there is because it was inherited from C++. In the first version of Java,
+the language designers decided to reserve the word "const", with the idea of maybe implementing it in a later version of Java.
+But to date, it hasn't been implemented.
 
 
-
-8.	What is the difference between a read-only object and an immutable object? What is an immutable object? Give an example of a read-only class.
+8.	What is the difference between a read-only object and an immutable object? What is an immutable object?
+Give an example of a read-only class.
 #################Response:
+A read-only object is an object that does not expose any way to change it.
+The important distinction is that read-only objects are allowed to change.
 
+An object is immutable if its state doesn’t change once the object has been created.
+An immutable object is an object that cannot change at all, no matter what happens (Reflection doesn't count).
 
+To create an immutable class following steps should be followed:
+-Create a final class.
+-Set the values of properties using constructor only.
+-Make the properties of the class final and private
+-Do not provide any setters for these properties.
+-If the instance fields include references to mutable objects, don't allow those objects to be changed.
+
+See class ReadOnlyClass.
 
 9.	What will be the results of the following code?
 public class StringUtil {
@@ -163,7 +226,9 @@ public class StringUtil {
   }
 }
 #################Response:
-
+world is not ENOUGH
+world is not enough
+ENOUGH
 
 
 	Problems
@@ -181,11 +246,12 @@ methods: setters, getters, draw, area, clone
 Class Shape
 attributes: Circle circle, Line line
  methods: draw, clone
+#################Done -> classes ClassPoint, ClassLine, ClassCircle, ClassShape, ClassTest
+
+
+
+2.	Implement arithmetical operations on complex numbers having the form a+i*b using the mutable-companion class technique.
+Implement a method that adds the result of the expression (2+3*i)*(4+5*i)*(6+7*i) to the object owner of the method.
 #################Done ->
-
-
-
-2.	Implement arithmetical operations on complex numbers having the form a+i*b using the mutable-companion class technique. Implement a method that adds the result of the expression (2+3*i)*(4+5*i)*(6+7*i) to the object owner of the method.
-#################Done ->
-
+class ComplexNumber, class MutableCompanionComplex
 

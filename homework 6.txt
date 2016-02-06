@@ -8,14 +8,15 @@
 
 1.	Is it possible to define your own generic classes? But generic methods?
 #################Response:
-Yes
-Yes
+generic classes -Yes
+generic methods -Yes
 
 2.      How do you declare the type parameter(s) for a generic class? But for a method?
 #################Response:
 public class Generics<T1,T2 >
 public T1 getT1()
-3.      Can you create a generic method in a generic class, where the generic method has a different type parameter than the class?
+3.      Can you create a generic method in a generic class, where the generic method has a different type parameter
+than the class?
 If yes, provide an example.
 #################Response:
 No
@@ -23,6 +24,7 @@ Message: Cannot rezolve symbol...
 
 4.      Does Java create multiple types for each invocation of a parameterized type? How many of them?
 #################Response:
+
 
 
 5.      Can you call a method declared with a type List<Object> with a parameter of type List<String>?
@@ -45,7 +47,8 @@ So, T implements the required method and all is well.
 
 8.      When do you use a generic method and when a method with wildcards?
 #################Response:
-
+A wildcard represents an arbitrary class, and is followed by a restriction.
+Generic - cand nu am nici o restrictie
 
 9.      Can you call generics code from "old" non-generics code? But non-generics code from generics code?
 #################Response:
@@ -86,7 +89,7 @@ So, T implements the required method and all is well.
     
     
     Is the code legal? If yes, why? If not, fix it.
-#################Done ->
+#################Done -> class ClassSink
 public static <T> T writeAll(Collection<T> coll, Sink<? super T> snk){
 
 

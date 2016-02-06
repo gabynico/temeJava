@@ -43,6 +43,7 @@ Yes.
 10
 	Problems
 
+1.	Write a test program to demonstrate the answer to question 6.
 #################Done -> class ReusingClasses_problem_1
 2.	Take the file Cartoon.java and comment out the constructor for the Cartoon class. Explain what happens.
 Deoarece class Cartoon extends Drawing, iar class Drawing extends Art initial(pana la comentare cod) se apelau

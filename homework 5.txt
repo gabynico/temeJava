@@ -8,12 +8,32 @@
 
 1.	What are the main differences between an array and an ArrayList? 
 #################Response:
-Array is static in size, ArrayList is dynamic in size.
+ARRAY
+Stores primitive data types and also objects
+Defined in Java language itself as a fundamental data structure
+Fixed size
+Stores similar data of one type
+It is not a class
+Cannot be synchronized
+Elements retrieved with for loop
+Elements accessible with index number
+Can be multidimensional
+ARRAYLIST
+Stores only objects
+Belongs to collections framework
+Growable and resizable. Elements can be added or removed
+Can store heterogeneous data types
+It is a class with many methods
+Can be obtained a synchronized version
+Can be retrieved with for loop and iterators
+Accessing methods like get() etc. are available
 
 2.	There is a good practice in OO programming not to have public attributes.
 Think of a good reason why the designers of Java have broken this rule and have exposed the length attribute of arrays?
 #################Response:
-
+see class PassingArrayToMethod
+Pentru a putea parcurge un array care este argument intr-o metoda.
+Pentru a putea adauga elemente intr-un array, daca este cazul si sa nu fie necesar sa se modifice codul initial scris.
 
 3.	Which of the following are ordered collections and which ones are not:
 a.	HashSet
@@ -22,27 +42,71 @@ c.	WeakHashMap
 d.	TreeMap
 e.	LinkedList	
 #################Response:
-
+a. No. A HashSet does not have any specific ordering. Is good to use when order is not important.
+b. Yes. TreeSet: the elements are ordered using their natural ordering, or by a Comparator provided at set creation time, depending on which constructor is used.
+c. No.
+d. No.
+e. Yes. LinkedList has an explicit ordering.
 
 4.	What is an Iterator? What is the difference between an Iterator and an Enumerator?
 #################Response:
+An iterator is an object that implements either the Iterator or the ListIterator interface.
+Iterator enables you to cycle through a collection, obtaining or removing elements.
+ListIterator extends Iterator to allow bidirectional traversal of a list and the modification of elements.
+
+Enumerations (or enums) are a specification for a class where all instances of the class are created within the class.
+Enums are good to use when you already know all possibilities of the class.
+See class EnumerationTest.
 
 
 5.	What is the difference between Collections and Maps?
 #################Response:
+A map is a collection that links a key to a value.
+Similar to how an array links an index to a value, a map links a key (one object) to a value (another object).
+Maps, like sets, cannot contain duplicates. This means each key can only exist once and can only link to a single value.
+Since Map is an interface, you must use one of the classes that implement Map such as HashMap to instantiate a map.
 
 
 6.	Make a comparison between SoftReference and WeakReferences? 
 #################Response:
+Reference classes are particularly important in context of How Garbage collection works.
+
+Generally an object becomes eligible for garbage collection in Java on following cases:
+- All references of that object explicitly set to null e.g. object = null
+- Object is created inside a block and reference goes out scope once control exit that block.
+- Parent object set to null, if an object holds reference of another object and when you set container
+object's reference null, child or contained object automatically becomes eligible for garbage collection.
+- If an object has only live weak references via WeakHashMap it will be eligible for garbage collection.
+
+There are four kind of reference in Java :
+-Strong reference.
+    String s = "abc"
+-Weak Reference
+    Counter counter = new Counter(); // strong reference - line 1
+    WeakReference<Counter> weakCounter = new WeakReference<Counter>(counter); //weak reference
+    counter = null; // now Counter object is eligible for garbage collection
+
+-Soft Reference
+    Counter prime = new Counter(); // prime holds a strong reference - line 2
+    SoftReference<Counter> soft = new SoftReference<Counter>(prime) ; //soft reference variable has SoftReference
+                        to Counter Object created at line 2
+    prime = null; // now Counter object is eligible for garbage collection but only be collected when JVM absolutely needs memory
+
+-Phantom Reference
+    DigitalCounter digit = new DigitalCounter(); // digit reference variable has strong reference - line 3
+    PhantomReference<DigitalCounter> phantom = new PhantomReference<DigitalCounter>(digit); // phantom reference
+                                                                                to object created at line 3
+    digit = null;
 
 
 7.	How can you obtain a sychronized (thread-safe) version of a LinkedList?
 #################Response:
+ LinkedList can be made synchronized explicitly by using Collections.synchronizedList method.
 
-
-8.	What specific List would you chose as a container if you would have to perform random removals and wish for the best performance? 
+8.	What specific List would you chose as a container if you would have to perform random removals and wish for
+the best performance?
 #################Response:
-
+There is a requirement of frequent addition and deletion in application then LinkedList is a best choice.
 
 
 	Problems
@@ -54,20 +118,36 @@ b.	merges b into a in an interleaved fashion (so if a=[a,b,c] and b=[w,x,y,z], t
 c.	removes every second element from b (so b would become [w,y]) 
 d.	finally removes from a every element that is in b (so a would become [a, b, x, c, z]) 
 #################Done ->
+class ArrayListsTest
 
 
-
-2.	Create a class Country containing two attributes: Name and Capital, both Strings. Make it Comparable so that the comparison only cares about the country�s name. Fill an ArrayList with objects of your class. Demonstrate that sorting works properly. Now make a Comparator that only cares about the capital and demonstrate that sorting works properly. Perform a binary search for the country whose capital is Paris using your second Comparator.
+2.	Create a class Country containing two attributes: Name and Capital, both Strings.
+Make it Comparable so that the comparison only cares about the country�s name.
+Fill an ArrayList with objects of your class.
+Demonstrate that sorting works properly.
+Now make a Comparator that only cares about the capital and demonstrate that sorting works properly.
+Perform a binary search for the country whose capital is Paris using your second Comparator.
 #################Done ->
-
+class SortedSetComparatorTest
 
 
 3.	Write a program to implement a memory sensitive cache.
 #################Done ->
+Using the SoftReference Class
+A softly reachable object is used to maintain memory-sensitive caches. That is, if you want to maintain a cache
+of objects as long as the program is not running low in memory, you can use softly reachable objects. When the
+program runs low in memory, the garbage collector clears the soft references to an object, making the object eligible
+for reclamation. At that point, your program will lose some or all objects from the cache. Java does not guarantee
+that soft references will not be cleared if the program is not running low in memory. However, it guarantees that all
+soft references will be cleared before the JVM throws an OutOfMemoryError. There is also no guarantee of the order
+in which soft references will be cleared. However, JVM implementations are encouraged to clear the least-recently
+created/used soft reference first.
+
+See class CorrectSoftRef
 
 
 
 4.	Write a program illustrating a �publish-subscribe� mechanism using a simple interface and and a Collection.
 #################Done ->
-
+package homework5.publish_subscribe
 
