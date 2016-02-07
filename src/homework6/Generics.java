@@ -7,6 +7,8 @@ public class Generics<T1,T2> {
     private T1 t1;
     private T2 t2;
 
+    private final static double pi = 3.14;
+
     Generics( T1 u1, T2 u2 ){
         this.t1 = u1;
         this.t2 = u2;

@@ -72,7 +72,8 @@ See class NonGenericsVsGenerics
 
 10.     Can you use statics in generic classes?
 #################Response:
-
+Yes
+see Generics
 
 
 11.     Provide two examples where you can get an unchecked warning.
@@ -106,7 +107,7 @@ See class NonGenericsVsGenerics
     
     
     Is the code legal? If yes, why? If not, fix it.
-#################Done -> class ClassSink
+#################Done -> see class ClassSink
 public static <T> T writeAll(Collection<T> coll, Sink<? super T> snk){
 
 
