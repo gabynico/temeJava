@@ -15,26 +15,40 @@ generic methods -Yes
 #################Response:
 public class Generics<T1,T2 >
 public T1 getT1()
+
+
 3.      Can you create a generic method in a generic class, where the generic method has a different type parameter
 than the class?
 If yes, provide an example.
 #################Response:
-No
-Message: Cannot rezolve symbol...
+Yes
+See class GenericClassMethod
 
 4.      Does Java create multiple types for each invocation of a parameterized type? How many of them?
 #################Response:
 
+When you replace the formal type parameter with the actual type it is called a parameterized type.
+A reference type in Java, which accepts one or more type parameters, is called a generic type.
+A generic type is mostly implemented in the compiler.
+The JVM has no knowledge of a generic type.
+All actual type parameters are erased during compile time using a process known as erasure.
 
+Java compiler replaces generic type information from source and adds casts as needed and delivers the byte code,
+generics related information are kept as meta-data in the bytecode for debugging, reflection purposes.
 
 5.      Can you call a method declared with a type List<Object> with a parameter of type List<String>?
 If not, how can you make the call legal?
 #################Response:
 No. See class GenericsQ5.
 'meth(java.util.List<java.lang.Object>)' in 'homework6.GenericsQ5' cannot be applied to '(java.util.List<java.lang.String>)'
+class GenericsQ5 - meth_ok
 
 6.      If you use wildcards, can you modify the parameter inside the method call? Why?
 #################Response:
+Yes.
+A wildcard represents an arbitrary class, and is followed by a restriction.
+Restrictia poate fi destul de permisiva.
+
 
 7.      Explain the following method declaration syntax:
         public static <T extends Comparable<? super T>> void sort(List<T> list)
@@ -53,10 +67,12 @@ Generic - cand nu am nici o restrictie
 
 9.      Can you call generics code from "old" non-generics code? But non-generics code from generics code?
 #################Response:
-
+Yes.
+See class NonGenericsVsGenerics
 
 10.     Can you use statics in generic classes?
 #################Response:
+
 
 
 11.     Provide two examples where you can get an unchecked warning.

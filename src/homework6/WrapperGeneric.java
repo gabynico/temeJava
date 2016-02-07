@@ -26,5 +26,12 @@ public class WrapperGeneric<T> {
         // A compile-time error. You can use greetingWrapper only to store a String.
         //greetingWrapper.set(new Integer(101));
 
+
+        Long i = Long.valueOf(987654321);
+        WrapperGeneric<Number> wrp = new WrapperGeneric<Number>(i);
+
+        Integer j = 123;
+        wrp.set(j);
+
     }
 }
