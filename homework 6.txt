@@ -118,7 +118,7 @@ public static <T> T writeAll(Collection<T> coll, Sink<? super T> snk){
         public boolean addAll(Collection c);
     }
 #################Done ->
-public interface Collection1<T> {
+public abstract interface Collection1<T> {
     public boolean containsAll(T c);
     public boolean addAll(T c);
 }
