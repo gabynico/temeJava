@@ -1,0 +1,39 @@
+-------------------------------------
+	Concurrency
+-------------------------------------
+
+
+	Questions
+
+
+1.	How can you create a thread?
+
+2.	Can a program terminate in case some of its threads are still running?
+
+3.	How can you wait for another thread to complete?
+
+4.	Which lock is shared by two synchronized methods of a class?
+
+5.	Which are the reasons for a thread to be blocked?
+
+6.	How can you stop a thread?
+
+7.	Which are the differences between wait and sleep?
+
+8.	Which are the differences between wait and calling a synchronized method (or entering a synchronized block)?
+
+9.	How can you stop a thread from waiting?
+
+10.	What is a race condition?
+ 
+
+	Problems
+
+
+1.	Create an example where there are two synchronized sections in a class and they still can be run in parallel.
+
+2.	Prove that the example Restaurant does not work correctly in case there is more than one waiter in the restaurant
+
+3.	Solve a single producer, single consumer problem using wait( ) and notify( ). The producer must not overflow the receiver's buffer, which can happen if the producer is faster than the consumer. If the consumer is faster than the producer, then it must not read the same data more than once. Do not assume anything about the relative speeds of the producer or consumer. 
+
+4.	Modify Restaurant.java so that multiple WaitPersons generate order requests to multiple Chefs, who produce orders and notify the WaitPerson who generated the request. You’ll need to use queues for both incoming order requests and outgoing orders.

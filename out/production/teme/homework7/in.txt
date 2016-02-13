@@ -1,0 +1,435 @@
+--------------------------------------------------------------------------------------------------------
+	Introduction to objects, Everything is an Object, Controlling program flow
+--------------------------------------------------------------------------------------------------------
+
+	Questions
+
+1.	What is an Object? What is a class?
+2.	Which from the following are access specifiers:
+a.	private
+b.	local
+c.	default
+d.	protected
+e.	public
+3.	Are there some differences between Interface and Abstract Class? If yes, enumerate some of them.
+4.	Which are the parts of a method?
+5.	What is wrong in the following code?
+class Shape {
+ …
+  public int getArea() {
+    …
+  }
+
+  public double getArea() {
+   …
+  }
+}
+6.	What javadoc tag is used to describe the method parameters?
+7.	Based on operator precedence order the following operator types:
+-	Arithmetic (and shift)
+-	Relational
+-	Conditional (ternary)
+-	Unary
+-	Assignment
+8.	What will be the results of the following code?
+…
+int s = 0;
+for (int i = 0; i < 10; ++i) {
+   s += i;
+}
+System.out.println(“Result: “ + s);
+
+	Problems
+
+1.	Create a switch statement that prints a message for each case, and put the switch inside a for loop that tries each case. Put a break after each case and test it, then remove the breaks and see what happens.
+2.	Write a program to transform a decimal number in a binary one.
+3.	Write a program to compute all prime numbers less than a given number.
+
+--------------------------------------------------------------------------------------------------------
+	Initialization & cleanup
+--------------------------------------------------------------------------------------------------------
+	Questions:
+
+1.	What is the role of the constructor?
+2.	What is the meaning of the default constructor?
+3.	Does the java syntax support constructor overloading?
+4.	How can you distinguish the overloaded methods?
+5.	Find and explain the errors from the following code.
+
+class Person {
+  private String firstName;
+  private String lastName;
+  private int age;
+
+  public Person() {
+    System.out.println(“Default constructor”);
+  }
+  public Person(String firstName, String lastName) {
+    System.out.println(“Other constructor”);
+    this();
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  public Person(String firstName, String lastName, int age) {
+    this();
+    this(firstName, lastName);
+    this.age = age;
+  }
+
+  public void print() {
+    this();
+    System.out.println(“First Name:” + this.firstName);
+    System.out.println(“Last Name:” + this.lastName);
+    System.out.println(“Age:” + this.age);
+  }
+
+  …
+}
+
+6.	When are initialized the static members of a class?
+7.	What will be the result of the execution for the following code:
+public class TestOverloading {
+
+  private void print(float f) {
+    System.out.println("Float: " + f);
+  }
+
+  private void print(double d) {
+    System.out.println("Double: " + d);
+  }
+
+  private void print(int i) {
+    System.out.println("Int: " + i);
+  }
+
+  private void print(char c) {
+    System.out.println("Char: " + c);
+  }
+
+  public static void main(String[] args) {
+    float f = 0;
+    TestOverloading t = new TestOverloading();
+    t.print(f);
+    t.print((int) f);
+    t.print((char) f);
+    t.print((double) f);
+  }
+}
+
+8.	When and why should we use finalize() method?
+
+	Problems:
+
+1.	Create a class with two (overloaded) constructors and call the second constructor inside the first one.
+2.	Create a class with a static String field that is initialized at the point of definition, and another one that is initialized by the static block. Add a static method that prints both fields.
+
+--------------------------------------------------------------------------------------------------
+	Reusing Classes
+--------------------------------------------------------------------------------------------------
+	Questions
+
+1.	Which are the possible ways to reuse a class?
+2.	Consider having class A, class B extends A and class C extends B. Now create an object of class C. Which is the order the constructors are called?
+3.	How can you call the constructor from the base class in a derived class constructor? When can you do that?
+4.	What would you use to build up an electronic document with text and images – composition or inheritance? But to model a Word document, an Excel spreadsheet and an HTML page?
+5.	How can you make a member private for normal clients and still visible for derived classes?
+6.	Can you change the value of a final object argument? For example, if a method takes a final List argument, can you call clear on it?
+7.	Are the methods of a final class also final?
+
+	Problems
+
+1.	Write a test program to demonstrate the answer to question 6.
+2.	Take the file Cartoon.java and comment out the constructor for the Cartoon class. Explain what happens.
+3.	Prove that default constructors are created for you by the compiler.
+4.	Create a class called Amphibian. From this, inherit a class called Frog. Put appropriate methods in the base class. In main( ), create a Frog and upcast it to Amphibian, and demonstrate that all the methods still work.
+5.	Use inheritance and composition to model a graphical object editor. (Solution: have a Graphic class, add a Point that extends Graphic, add a Circle that extends Graphic and has a Point as center, add a Line that extends Graphic and has two Points as the ends).
+
+--------------------------------------------------------------------------------------------------
+	Polymorphism
+--------------------------------------------------------------------------------------------------
+	Questions:
+
+1.	What is the polymorphism?
+2.	What is binding? Classify method binding.
+3.	Which methods can not be overridden?
+4.	Which is the result of the following code? Explain the result.
+class A {
+  public void whoAmI() {
+    System.out.println(“I am class: ” + getName());
+  }
+  private String getName() {
+    return “A”;
+  }
+}
+class B extends A {
+  String getName() {
+     return “B”;
+  }
+}
+public static void main(String[] args) {
+  B b = new B();
+  b.whoAmI();
+}
+
+5.	Why is not recommended to call methods inside constructors?
+6.	What is wrong in the following code:
+class A {
+  private Integer i = new Integer(0);
+  A() {
+    printValue();
+  }
+  protected printValue() {
+     System.out.println(“Default value for I is:” + i.intValue());
+  }
+}
+class B {
+   private Integer i;
+   protected printValue() {
+     System.out.println(“Default value for I in B is:” + i.intValue());
+   }
+}
+Propose solutions for correcting the above code.
+
+
+	Problems:
+
+1.	Create an abstract class with no methods. Derive a class and add a method. Create a static method that takes a reference to the base class, downcasts it to the derived class, and calls the method. In main( ), demonstrate that it works. Now put the abstract declaration for the method in the base class, thus eliminating the need for the downcast.
+2.	Create a base class with two methods. In the first method, call the second method. Inherit a class and override the second method. Create an object of the derived class, upcast it to the base type, and call the first method. Explain what happens.
+3.	Consider the folowing code:
+	B b = new B();
+	b.print();  // should print “from b”.
+	((A)b).print(); //should print “from a”.
+	Implement those two classes in order to obtain the expected outputs.
+-------------------------------------------------------------------------------------------------
+	Interfaces & Inner-Classes
+-------------------------------------------------------------------------------------------------
+
+	Questions
+
+1.	What is the difference between an Interface and an Abstract class? Explain when it is best to use Interfaces and when abstract classes.
+2.	Write a short code snippet to define a new interface I3 that inherits two existing interfaces I1 and I2. What happens if the definitions of the I1 and I2 are:
+public interface I1 {
+  void foo();
+}
+public interface I2 {
+  public void foo();
+}
+
+What about if the two interfaces are:
+public interface I1 {
+  public void foo();
+}
+public interface I2 {
+  public int foo();
+}
+
+
+3.	Point any errors in the code snippet below and explain them:
+interface Shape {
+   int getArea();
+   void draw();
+}
+
+public class Tile {
+   private int width = 0, height = 0;
+   int getArea() { return height * width;}
+   void setHeight(int height) { this.height = height; }
+   void setWidth(int width) { this.width = width; }
+}
+
+public class TileShape extends Tile implements Shape {
+   public void draw() {
+     System.out.println(“This a tile with area of: “ + this.getArea());
+   }
+   public static void main(String[] args) {
+     TileShape tileShape = new TileShape();
+     tileShape.setHeight(10);
+     tileShape.setWidth(10);
+     Shape shape = tileShape;
+     shape.draw();
+   }
+}
+4.	What are the access modifiers of the fields and methods inside the interface? Is it possible to declare an interface as being static? What about private?
+5.	What are the differences between inner classes and nested classes?
+6.	Provide a short code snippet to define an inner anonymous class:
+a.	That implements a given interface I1 with one method: void f();
+b.	That extends a given class C1
+c.	That extends a given class C2 with no default constructor and a constructor with two string parameters.
+7.	Which of the following are true when talking about inner classes (non-anonymous):
+a.	Can be declared inside other inner classes
+b.	Can be declared inside methods and blocks of code
+c.	Can access private members from the outer class(es)
+d.	Can have more than one constructor
+e.	Defines an IS-A relationship between the outer and the inner class
+f.	Can be further extended by other classes
+
+8.	Given the code below, how can you access from the method f() the x member of the outer class?
+…
+public class A {
+  private int x = 10;
+  private class B {
+    private int x = 20;
+    public void f() {
+      System.out.println(x);
+    }
+  }
+}
+
+9.	Given the following interface definition:
+
+public interface I1 {
+  public interface I2 {
+     void f2();
+  }
+  public void f1();
+}
+
+Which of the following definitions are correct (and explain) ?
+1.
+public class A implements I1 {
+
+  public void f1() {};
+}
+
+2.
+public class A implements I1 {
+  public class A2 implements I2 {
+     void f2() {};
+  }
+  public void f1() {};
+}
+
+3.
+public class A2 implements I2 {
+  public void f2() {}
+}
+
+4.
+public class A2 implements I1.I2 {
+  void f2();
+}
+
+10.	Given the following class, how can you create a new instance of the classes A and B in the main method():
+
+public class Test {
+   class A {
+   }
+   static class B {
+   }
+}
+class MyTest {
+   public static void main(String[] args) {
+   }
+}
+
+	Problems
+
+1.	Modify the class below (using an inner class) to allow using it as an Iterator (make an example call of the method foo).
+public interface Iterator {
+  boolean hasNext();
+  Object next();
+}
+public class Map {
+  private String[] directions = {“North”, “East”, “South”, “West”};
+}
+…
+public void foo(Iterator it) {
+ // …
+}
+
+2.	Given the CDPlayer class with the definition below, extend the CDPlayer class and add the necessary changes so it can be used as iterator. (hint: create a method inside the derived class that returns an Iterator and uses an anonymous inner class do to this)
+public interface Iterator {
+  boolean hasNext();
+  Object next();
+}
+public class CDPlayer {
+  private String[] tracks = {“Track 1”, “Track 2”, “Track 3”};
+  private int currentTrack;
+
+  public void next() { //… }
+  public void play() { //… }
+  public void stop() { //… }
+  public void prev() { //… }
+}
+public void foo(Iterator it) {
+ // …
+}
+
+-------------------------------------------------------------------------------------------------
+	Error handling with exceptions
+-------------------------------------------------------------------------------------------------
+
+	Questions:
+
+1.	What information you can print about an exception?
+2.	What is the class name of the standard Java exception that does not have to be handled?
+3.	What is the exception restriction related to method overriding? Do constructors have the same restriction? Why?
+4.
+a.	Is the exception specification part of the method signature? Prove your answer by writing a small piece of code to justify your answer; comment your proof.
+b.	Which parts of the method declaration go in the method signature?
+5.	Knowing that
+System.out.print
+does not throw any exception, consider the following of code:
+
+  private static int getI() {
+    int i = 0;
+    try {
+      System.out.println("i is " + ++i);
+      i++;
+      try {
+        throw new Exception("Now i is " + i++);
+      }
+      catch (Throwable t) {
+        i++;
+      }
+    }
+    finally {
+      System.out.println("finally i is " + i++);
+      return i++;
+    }
+  }
+What strings are printed to the console, and what is value getI() returns?
+
+	Problems
+
+1.	Follow the steps below to create a small Java program with 2 classes:
+a.	create a class RandomPlay with a method that generates two random numbers between 1 and 10 (see java.lang.Math.random() for generating random numbers)
+b.	if the difference of the 2 numbers is higher than 3, throw an exception you’ll specially define for this case
+c.	add a main() method to class RandomPlay that repeatedly calls the first method until it throws no exception
+d.	exit the program by printing the number of times the first method threw your exception
+2.	Consider the following class definitions:
+
+public class Exception1 extends Exception {}
+public class Exception2 extends Exception {}
+
+and method:
+
+public throwException() throws Exception1, Exception2 {
+	    // method body not shown
+	}
+
+and the following 2 blocks of code:
+block1:
+
+try {
+    throwException();
+}
+catch (Exception1 e) {
+    System.err.println("Caught Exception1");
+}
+catch (Exception2 e) {
+    System.err.println("Caught Exception2");
+}
+
+block2:
+try {
+    throwException();
+}
+catch (Exception e) {
+    // write your code here
+}
+
+Replace the commented line in block 2 with your code so that block 2 has the same functionality as block 1.
+
+
