@@ -14,8 +14,11 @@ public class DeriveClass extends AbstractClassDemo {
 
     public static void main(String[] args) {
 
-        DeriveClass x = new DeriveClass();
-        x.m2(x);
+//        DeriveClass x = new DeriveClass();
+    	
+    	AbstractClassDemo x = new DeriveClass();
+        DeriveClass.m2(x);
+        DeriveClass.m2(new DeriveClass());
     }
 
 }

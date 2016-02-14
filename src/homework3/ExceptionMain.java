@@ -25,6 +25,7 @@ public class ExceptionMain {
         }
         catch (Exception e) {
             // write your code here
+        	//[ZP] you should print here "Caught Exception1" or "Caught Exception2"
             System.err.println("Caught Exception");
         }
 

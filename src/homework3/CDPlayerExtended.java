@@ -11,9 +11,11 @@ public class CDPlayerExtended extends CDPlayer {
         }
     }
 
+    //[ZP] why static? 
     public static Iterator retIterator(CDPlayer cdPlayer) {
 
         return new Iterator() {
+        	//[ZP] ???? cdPlayer contains only 3 tracks
             private int cnt = 4;
             private int currentIndex = 0;
 
@@ -28,6 +30,7 @@ public class CDPlayerExtended extends CDPlayer {
 
             @Override
             public Object next() {
+            	//[ZP] I need a cd player not an int the next() method should return the next object from the list
                 return currentIndex++;
             }
         };

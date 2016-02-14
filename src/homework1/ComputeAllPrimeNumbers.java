@@ -1,39 +1,43 @@
 package homework1;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Created by ns on 1/26/2016.
  */
+// [ZP] please solve warnings.
+// [ZP] use Ctrl+Shift+f to format code
+// [ZP] use Ctrl+Shift+o to organize imports
+// [ZP] 9
 public class ComputeAllPrimeNumbers {
 
-    public static void main (String[] args) throws java.lang.Exception
-    {
-        int n;
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
+	// [ZP] don't need to use the full qualified name
+	// [ZP] use ide (intellj or eclise code compression
+	public static void main(String[] args) throws java.lang.Exception {
+		int n;
 
-        int s =0;
-        ArrayList a = new ArrayList();
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
 
-        for(int i = 0; i <= n; i++){
-            a.add("0");
-        }
+		int s = 0;
+		ArrayList a = new ArrayList();
 
-        for(int i = 2; i <= n; i++){
-            if(a.get(i) == "0" ){
-                for(int j = i + i; j <= n; j += i){
-                    a.set(j, "1");
-                }
-                //System.out.println(i);
-                s+=i;
-            }
+		for (int i = 0; i <= n; i++) {
+			a.add("0");
+		}
 
-        }
-        System.out.println(s);
+		for (int i = 2; i <= n; i++) {
+			if (a.get(i) == "0") {
+				for (int j = i + i; j <= n; j += i) {
+					a.set(j, "1");
+				}
+				System.out.print(i + " ");
+				s += i;
+			}
 
+		}
+		System.out.println(s);
 
-
-    }
+	}
 }

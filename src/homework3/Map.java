@@ -1,6 +1,7 @@
 package homework3;
 
 /**
+ * [ZP] see comments in CDPlayerExtended.
  * Created by ns on 1/30/2016.
  */
 public class Map {

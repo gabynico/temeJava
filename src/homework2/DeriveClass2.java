@@ -17,6 +17,8 @@ public class DeriveClass2 extends AbstractClassDemo2 {
 
         DeriveClass2 x = new DeriveClass2();
         x.m2(x);
+        //[ZP] call to a static
+        DeriveClass2.m2(x);
     }
 
 }
