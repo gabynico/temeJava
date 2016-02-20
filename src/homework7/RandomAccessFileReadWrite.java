@@ -1,7 +1,6 @@
 package homework7;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
@@ -18,8 +17,6 @@ public class RandomAccessFileReadWrite {
 
             raf.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

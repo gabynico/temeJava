@@ -13,13 +13,15 @@ public class WordsWithScanner {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while(sc.hasNext()){
-            String s = sc.next();
+        if (sc != null) {
+            while(sc.hasNext()){
+                String s = sc.next();
 
-            StringBuffer buffer = new StringBuffer(s);
-            buffer.reverse();
+                StringBuffer buffer = new StringBuffer(s);
+                buffer.reverse();
 
-            System.out.println(buffer);
+                System.out.println(buffer);
+            }
         }
     }
 }

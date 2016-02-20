@@ -29,8 +29,6 @@ public class Compress {
             fin.close();
             fout.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

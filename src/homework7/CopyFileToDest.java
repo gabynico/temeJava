@@ -21,8 +21,8 @@ public class CopyFileToDest {
     }
 
     public static void copy(String[] args) {
-        FileChannel in = null;
-        FileChannel out = null;
+        FileChannel in ;
+        FileChannel out ;
         ByteBuffer buffer = ByteBuffer.allocate(SIZE);
         try {
             in = new FileInputStream(args[0]).getChannel();
@@ -37,8 +37,6 @@ public class CopyFileToDest {
             in.close();
             out.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

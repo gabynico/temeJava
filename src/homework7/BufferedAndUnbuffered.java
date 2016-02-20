@@ -27,8 +27,6 @@ public class BufferedAndUnbuffered {
             System.out.println("OutputStream - Write file  buffered: " + time(buf) + "ms");
 
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -13,11 +13,16 @@ public class ReadFileByLine {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        BufferedReader bufferedReader = null;
+        if (fileReader != null) {
+            bufferedReader = new BufferedReader(fileReader);
+        }
 
         String info = null;
         try {
-            info = bufferedReader.readLine();
+            if (bufferedReader != null) {
+                info = bufferedReader.readLine();
+            }
 
             while(info != null){
 
@@ -26,7 +31,9 @@ public class ReadFileByLine {
                 info = bufferedReader.readLine();
             }
 
-            bufferedReader.close();
+            if (bufferedReader != null) {
+                bufferedReader.close();
+            }
 
 
         } catch (IOException e) {
@@ -42,15 +49,19 @@ public class ReadFileByLine {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        String s, s2 = new String();
+        String s, s2 = "";
         try {
-            while((s = in.readLine())!= null)
-                s2 += s + "\n";
+            if (in != null) {
+                while((s = in.readLine())!= null)
+                    s2 += s + "\n";
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            in.close();
+            if (in != null) {
+                in.close();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
