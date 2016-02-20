@@ -181,33 +181,35 @@ public class ClassTest {
         if (clone_s != null) {
             clone_s.setL2(clone_l2);
         }
-        
-        
-        System.out.println("Shape:" + "\n" +
-                "Circle 1:" + "\n" + "Radius:" + clone_s.getC1().getRadius() +
-                "\n" + "Center:" +
-                "x:" + clone_s.getC1().getCenter().getX() + ";" +
-                "y:" + clone_s.getC1().getCenter().getY() + "\n" +
-                "Circle 2:" + "\n" + "Radius:" + clone_s.getC2().getRadius() +
-                "\n" + "Center:" +
-                "x:" + clone_s.getC2().getCenter().getX() +  ";" +
-                "y:" + clone_s.getC2().getCenter().getY() + "\n" +
-                /*"Line 1:" + "\n" +
-                "Point 1:" + "\n" +
-                "x:" + clone_s.getL1().getPoint1().getX() +
-                "y:" + clone_s.getL1().getPoint1().getY() +
-                "Point 2:" + "\n" +
-                "x:" + clone_s.getL1().getPoint2().getX() +
-                "y:" + clone_s.getL1().getPoint2().getY() +
-                "Line 2:" + "\n" +
-                "Point 1:" + "\n" +
-                "x:" + clone_s.getL2().getPoint1().getX() +
-                "y:" + clone_s.getL2().getPoint1().getY() +
-                "Point 2:" + "\n" +
-                "x:" + clone_s.getL2().getPoint2().getX() +
-                "y:" + clone_s.getL2().getPoint2().getY() +*/
-                "hashCode:" + clone_s.hashCode()
-        );
+
+
+        if (clone_s != null) {
+            System.out.println("Shape:" + "\n" +
+                    "Circle 1:" + "\n" + "Radius:" + clone_s.getC1().getRadius() +
+                    "\n" + "Center:" +
+                    "x:" + clone_s.getC1().getCenter().getX() + ";" +
+                    "y:" + clone_s.getC1().getCenter().getY() + "\n" +
+                    "Circle 2:" + "\n" + "Radius:" + clone_s.getC2().getRadius() +
+                    "\n" + "Center:" +
+                    "x:" + clone_s.getC2().getCenter().getX() +  ";" +
+                    "y:" + clone_s.getC2().getCenter().getY() + "\n" +
+                    /*"Line 1:" + "\n" +
+                    "Point 1:" + "\n" +
+                    "x:" + clone_s.getL1().getPoint1().getX() +
+                    "y:" + clone_s.getL1().getPoint1().getY() +
+                    "Point 2:" + "\n" +
+                    "x:" + clone_s.getL1().getPoint2().getX() +
+                    "y:" + clone_s.getL1().getPoint2().getY() +
+                    "Line 2:" + "\n" +
+                    "Point 1:" + "\n" +
+                    "x:" + clone_s.getL2().getPoint1().getX() +
+                    "y:" + clone_s.getL2().getPoint1().getY() +
+                    "Point 2:" + "\n" +
+                    "x:" + clone_s.getL2().getPoint2().getX() +
+                    "y:" + clone_s.getL2().getPoint2().getY() +*/
+                    "hashCode:" + clone_s.hashCode()
+            );
+        }
 
     }
 

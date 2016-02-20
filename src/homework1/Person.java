@@ -1,9 +1,7 @@
 package homework1;
 
 import java.lang.*;
-/**
- * Created by ns on 1/26/2016.
- */
+
 public class Person {
     private String firstName;
     private String lastName;
@@ -33,7 +31,7 @@ public class Person {
     }
 
 
-    public static void main (String[] args) throws java.lang.Exception
+    public static void main (String[] args) /*throws java.lang.Exception*/
     {
         // your code goes here
         Person p = new Person("A","B", 22);

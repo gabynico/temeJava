@@ -1,0 +1,34 @@
+-------------------------------------
+	Discovering problems
+-------------------------------------
+
+
+	Questions
+
+
+1.	Describe the steps that should be followed in order to create a JUnit test to test a given class.
+2.	Explain how can one run a single test in the static way. Give a small example.
+3.	What should be done in a Unit test class to be sure that all the test methods can be run by a simple main call?
+
+4.	How can one define properties to be used in Ant build files? How can the properties be used in the value of task attributes?
+5.	Explain the Ant path-like structures.
+
+6.	Explain how can the default log4j initialization procedure be used.
+7.	How can you get the “root” logger?
+8.	What types of configuration files are supported by log4j? Which are the configurators available for each supported type?
+
+
+
+	Problems
+
+
+1.	Create a Triangle class. The class attributes represent the length of the triangle’s sides. The class is able to determine the type of the triangle: scalene, isosceles and equilateral.  Write a unit test that you feeel adequately to test this class.
+
+2.	Create a simple test project containing the following modules:
+- common - place in this module a class responsible to initialize log4j and to hide the log4j details from all other project code
+- math - place here in an appropriate package (e.g. com.iquest.university.math.geometry) the Triangle class
+
+In the Triangle class use the log4j wrapper you defined in common.
+Add a new source path to the math module (e.g. test) and place here the Triangle unit test.
+Create the ant build scripts responsible to compile each module, build jar files for each module, compile unit tests, run the unit tests for each module and place all unit test results in a single place.
+

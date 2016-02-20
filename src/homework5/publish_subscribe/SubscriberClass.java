@@ -1,8 +1,5 @@
 package homework5.publish_subscribe;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class SubscriberClass implements  SubscriberInterface {
 
     private PublisherClass publisher;

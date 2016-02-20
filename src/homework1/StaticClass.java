@@ -1,8 +1,5 @@
 package homework1;
 
-/**
- * Created by ns on 1/26/2016.
- */
 public class StaticClass {
 
 	private static String str = "abc";
@@ -16,14 +13,14 @@ public class StaticClass {
 	}
 
 	//[ZP] - this method should be static (Add a static method that prints both fields.)
-	public void print() {
+	public static void print() {
 		System.out.println("cnt1:" + cnt1);
 		System.out.println("cnt2:" + cnt2);
 		System.out.println("str:" + str);
 	}
 
 	//[ZP] don't need the exception
-	public static void main(String[] args) throws java.lang.Exception {
+	public static void main(String[] args) /*throws java.lang.Exception*/ {
 		StaticClass c = new StaticClass();
 		c.print();
 

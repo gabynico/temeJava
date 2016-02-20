@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/3/2016.
- */
 public class StringUtil {
 
     public static String lowcase(String s) {

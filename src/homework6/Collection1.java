@@ -1,9 +1,8 @@
 package homework6;
 
-/**
- * Created by ns on 1/30/2016.
- */
-public abstract interface Collection1<T> {
-    public boolean containsAll(T c);
-    public boolean addAll(T c);
+import java.util.Collection;
+
+interface Collection1<T> {
+    boolean  containsAll(Collection<? super T> c, T t);
+    boolean addAll(Collection<? super T> c, T t);
 }

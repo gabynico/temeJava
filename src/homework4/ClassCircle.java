@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/5/2016.
- */
 public class ClassCircle implements Cloneable{
 
     private ClassPoint center;
@@ -14,8 +11,7 @@ public class ClassCircle implements Cloneable{
     }
 
     public Object makeCopy() throws CloneNotSupportedException {
-        Object o =  new Object();
-        return o = super.clone();
+         return  super.clone();
     }
 
     public double area(){

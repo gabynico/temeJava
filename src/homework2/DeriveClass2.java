@@ -1,8 +1,5 @@
 package homework2;
 
-/**
- * Created by ns on 1/26/2016.
- */
 public class DeriveClass2 extends AbstractClassDemo2 {
 
     public void m1(){
@@ -16,7 +13,7 @@ public class DeriveClass2 extends AbstractClassDemo2 {
     public static void main(String[] args) {
 
         DeriveClass2 x = new DeriveClass2();
-        x.m2(x);
+        //x.m2(x);
         //[ZP] call to a static
         DeriveClass2.m2(x);
     }

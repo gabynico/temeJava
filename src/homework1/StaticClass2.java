@@ -1,8 +1,5 @@
 package homework1;
 
-/**
- * Created by ns on 1/26/2016.
- */
 public class StaticClass2 {
 
     private static int cnt = 3;

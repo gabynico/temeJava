@@ -30,8 +30,8 @@ public class Generics<T1,T2> {
         this.t2 = u2;
     }
 
-    public String toPrint(T1 u1, T2 u2 ){
-        return u1 + " and " + u2;
+    public String toPrint(T1 u1, T2 u2){
+        return u1 + " , " + u2 + " and static pi = " + this.pi;
     }
 
     public static void main(String[] args) {
@@ -40,6 +40,7 @@ public class Generics<T1,T2> {
         g.setT1("aaaaaaaaaa");
         g.setT2(3);
         System.out.println(g.toPrint( g.getT1(), g.getT2()));
+
     }
 
 }

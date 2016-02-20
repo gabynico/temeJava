@@ -1,8 +1,5 @@
 package homework3;
 
-/**
- * Created by ns on 1/29/2016.
- */
 public class CDPlayerExtended extends CDPlayer {
 
     public void foo(Iterator it) {

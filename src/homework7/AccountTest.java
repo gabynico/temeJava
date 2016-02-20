@@ -2,9 +2,6 @@ package homework7;
 
 import java.io.*;
 
-/**
- * Created by ns on 2/12/2016.
- */
 public class AccountTest {
 
     public static void main(String[] args) {

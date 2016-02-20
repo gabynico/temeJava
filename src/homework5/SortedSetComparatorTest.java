@@ -1,13 +1,9 @@
 package homework5;
 
 import java.util.Comparator;
-import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class SortedSetComparatorTest {
 
     public static void main(String[] args) {

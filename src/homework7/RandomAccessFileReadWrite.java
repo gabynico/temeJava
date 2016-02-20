@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-/**
- * Created by ns on 2/12/2016.
- */
 public class RandomAccessFileReadWrite {
 
     public static void main(String[] args){

@@ -1,8 +1,5 @@
 package homework6;
 
-/**
- * Created by ns on 1/31/2016.
- */
 public abstract class CollectionGenerics <T> implements  Comparable<CollectionGenerics <T>>{
     T[] items;
     int index;

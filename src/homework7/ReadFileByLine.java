@@ -2,9 +2,6 @@ package homework7;
 
 import java.io.*;
 
-/**
- * Created by ns on 2/10/2016.
- */
 public class ReadFileByLine {
 
     public static void main(String[] args) {

@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/5/2016.
- */
 public class ClassLine implements  Cloneable{
     private ClassPoint point1;
     private ClassPoint point2;

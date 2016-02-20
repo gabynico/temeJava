@@ -2,9 +2,6 @@ package homework6;
 
 import java.util.Collection;
 
-/**
- * Created by ns on 1/30/2016.
- */
 public abstract class ClassSink<T>  implements Sink<T>{
 
     public static <T> T writeAll(Collection<T> coll, Sink<? super T> snk){

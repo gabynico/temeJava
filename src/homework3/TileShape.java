@@ -1,8 +1,5 @@
 package homework3;
 
-/**
- * Created by ns on 1/30/2016.
- */
 public class TileShape extends Tile implements Shape {
     public void draw() {
         System.out.println("This a tile with area of: " + this.getArea());

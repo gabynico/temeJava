@@ -4,13 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by ns on 1/31/2016.
- */
 public class BubbleSort {
    
     public <E extends Comparable<? super E> > void sortMeth( List<E> list){
-        boolean changed = false;
+        boolean changed;
         do{
             changed = false;
             for (int i = 0; i < list.size() - 1; i ++){
@@ -19,12 +16,12 @@ public class BubbleSort {
                     changed = true;
                 }
             }
-        }while(changed == true);
+        }while(changed);
     }
 
    
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<Integer>();
+        ArrayList<Integer> a = new ArrayList<>();
         a.add(7);
         a.add(5);
         a.add(1);
@@ -34,7 +31,7 @@ public class BubbleSort {
         System.out.println(a.toString());
 
 
-        ArrayList<String> aa = new ArrayList<String>();
+        ArrayList<String> aa = new ArrayList<>();
         aa.add("ffffff");
         aa.add("ddddddd");
         aa.add("aaaaaaa");

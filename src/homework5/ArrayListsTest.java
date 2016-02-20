@@ -5,9 +5,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class ArrayListsTest {
 
     public static void printArrayList(ArrayList<String> list){
@@ -32,8 +29,8 @@ public class ArrayListsTest {
         //printArrayList(b);
 
         //    b.	merges b into a in an interleaved fashion (so if a=[a,b,c] and b=[w,x,y,z], then a becomes [a, w, b, x, c, y, z])
-        String[] a_array = a.toArray(new String[0]);
-        String[] b_array = b.toArray(new String[0]);
+        String[] a_array = a.toArray(new String[a.size()]);
+        String[] b_array = b.toArray(new String[b.size()]);
 
         ArrayList<String> c = new ArrayList<>();
 
@@ -59,7 +56,7 @@ public class ArrayListsTest {
         c.clear();
         c.addAll(b);
         //    c.	removes every second element from b (so b would become [w,y])
-        for(String l : c){
+        for(String ignored : c){
             if (j%2 == 0) {
                 b.remove(j -1 - cnt_remove );
                 cnt_remove++;

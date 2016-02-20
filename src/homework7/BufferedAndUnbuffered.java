@@ -3,9 +3,6 @@ package homework7;
 import java.io.*;
 import java.util.Date;
 
-/**
- * Created by ns on 2/12/2016.
- */
 public class BufferedAndUnbuffered {
 
     public static void main(String[] args) {

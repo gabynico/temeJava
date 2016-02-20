@@ -1,8 +1,5 @@
 package homework6;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class WrapperGeneric<T> {
 
     private T ref;

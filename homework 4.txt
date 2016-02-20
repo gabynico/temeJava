@@ -49,6 +49,7 @@ c instanceof Shape -> false
 c.getClass() == Shape.class -> false
 c.isInstance(Shape)  -> false
 c.getClass() == Circle.class -> true
+See class Test3.
 
 4.	Is it possible to build a valid line of Java code in a string and then execute it at run-time (Like in the sample below)?
 Write a short program to back-up your answer.
@@ -62,7 +63,8 @@ see class UnknownClass:
 
 	Problems:
 
-1.	Write a very simple graphical editor that allows you to draw objects deriving from the Shape class. Read the available classes of shapes
+1.	Write a very simple graphical editor that allows you to draw objects deriving from the Shape class.
+Read the available classes of shapes
 from a configuration file, and present to the user a simple menu that allows him to select the shape to be drawn.
 public interface Shape {
   String draw();

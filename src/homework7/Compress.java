@@ -3,9 +3,6 @@ package homework7;
 import java.io.*;
 import java.util.zip.DeflaterOutputStream;
 
-/**
- * Created by ns on 2/13/2016.
- */
 public class Compress {
 
     public static void main(String[] args){

@@ -4,9 +4,7 @@ import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-/**
- * Created by ns on 2/13/2016.
- */
+
 public class CopyFileToDest {
 
     private static final int SIZE = 1024;

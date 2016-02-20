@@ -4,9 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-/**
- * Created by ns on 2/13/2016.
- */
 public class WordsWithScanner {
 
     public static void main(String[] args) {

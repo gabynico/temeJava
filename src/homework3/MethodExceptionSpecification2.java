@@ -1,8 +1,5 @@
 package homework3;
 
-/**
- * Created by ns on 1/30/2016.
- */
 public class MethodExceptionSpecification2 implements MethodExceptionSpecification {
     @Override
     public void m(int i, int j) throws ArithmeticException{

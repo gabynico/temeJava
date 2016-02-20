@@ -14,19 +14,18 @@ generic methods -Yes
 2.      How do you declare the type parameter(s) for a generic class? But for a method?
 #################Response:
 public class Generics<T1,T2 >
-public T1 getT1()
+public T1 getT1(T1 t)
 
 
 3.      Can you create a generic method in a generic class, where the generic method has a different type parameter
 than the class?
 If yes, provide an example.
 #################Response:
-Yes
-See class GenericClassMethod
+See class GenericClassMethod-> public void genericMethod1(E ref) {
+See class GenericClassMethod-> public void genericMethod2(ArrayList<Object> list) {
 
 4.      Does Java create multiple types for each invocation of a parameterized type? How many of them?
 #################Response:
-
 When you replace the formal type parameter with the actual type it is called a parameterized type.
 A reference type in Java, which accepts one or more type parameters, is called a generic type.
 A generic type is mostly implemented in the compiler.
@@ -119,9 +118,9 @@ public static <T> T writeAll(Collection<T> coll, Sink<? super T> snk){
         public boolean addAll(Collection c);
     }
 #################Done ->
-public abstract interface Collection1<T> {
-    public boolean containsAll(T c);
-    public boolean addAll(T c);
+interface Collection1<T> {
+    boolean  containsAll(Collection<? super T> c, T t);
+    boolean addAll(Collection<? super T> c, T t);
 }
 
 

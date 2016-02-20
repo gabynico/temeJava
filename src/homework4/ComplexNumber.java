@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/5/2016.
- */
 //immutable class
 final class ComplexNumber {
 
@@ -62,10 +59,10 @@ class MutableCompanionComplex {
         this.b = y;
     }
 
-    public void method_add(int x, int y) {
-        this.a += x;
-        this.b += y;
-    }
+//    public void method_add(int x, int y) {
+//        this.a += x;
+//        this.b += y;
+//    }
 
     public void method_multiply(int x, int y) {
         int new_a;

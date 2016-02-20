@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/5/2016.
- */
 public class ClassShape implements Cloneable {
 
     private ClassCircle c1;

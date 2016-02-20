@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/5/2016.
- */
 public /*final*/ class ReadOnlyClass {
     private final int f1;
     private final int f2;

@@ -1,14 +1,15 @@
 package homework5;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class PassingArrayToMethod {
 
     public void printArray(int[] arr){
         for(int i = 0; i< arr.length; i++){
             System.out.print( arr[i]);
         }
+
+//        for (int x : arr) {
+//            System.out.print(x);
+//        }
         System.out.println();
     }
 
