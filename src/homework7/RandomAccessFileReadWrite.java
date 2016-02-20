@@ -37,6 +37,7 @@ public class RandomAccessFileReadWrite {
 
             int i = 0;
             int n ;
+            raf.seek(0);
             while (raf.getFilePointer() < raf.length() ) {
                 n = raf.readInt();
                 if (i > 1) {

@@ -3,6 +3,7 @@ package homework5;
 /**
  * Created by ns on 2/6/2016.
  */
+//[ZP] country should be Comparable
 public class Country {
     String nameContry;
     String capital;

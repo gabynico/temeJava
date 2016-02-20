@@ -12,6 +12,12 @@ public class ClassPoint implements  Cloneable{
         System.out.println( " Point:" );
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+    	// TODO Auto-generated method stub
+    	return super.clone();
+    }
+    //[ZP] - the clone method must be override when we are talking about clone.
     public Object makeCopy() throws CloneNotSupportedException {
         Object o =  new Object();
         return o = super.clone();

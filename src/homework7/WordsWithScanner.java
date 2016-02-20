@@ -7,6 +7,9 @@ import java.util.Scanner;
 /**
  * Created by ns on 2/13/2016.
  */
+//[ZP] scanner is not part of nio. see package java.nio
+//[ZP] the result should be I og emoh. not I og .emoh
+//[ZP] 0
 public class WordsWithScanner {
 
     public static void main(String[] args) {

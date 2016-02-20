@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by ns on 2/6/2016.
  */
+// [ZP] - 6
 public class ArrayListsTest {
 
     public static void printArrayList(ArrayList<String> list){
@@ -32,6 +33,7 @@ public class ArrayListsTest {
         //printArrayList(b);
 
         //    b.	merges b into a in an interleaved fashion (so if a=[a,b,c] and b=[w,x,y,z], then a becomes [a, w, b, x, c, y, z])
+        //[ZP] why array, you should use methods from ArrayList
         String[] a_array = a.toArray(new String[0]);
         String[] b_array = b.toArray(new String[0]);
 
@@ -59,8 +61,10 @@ public class ArrayListsTest {
         c.clear();
         c.addAll(b);
         //    c.	removes every second element from b (so b would become [w,y])
+        // [ZP] what about iterators????
         for(String l : c){
             if (j%2 == 0) {
+            	//[ZP] too complicated. Just you can understand this.
                 b.remove(j -1 - cnt_remove );
                 cnt_remove++;
             }
@@ -70,9 +74,11 @@ public class ArrayListsTest {
 
         //    d.	finally removes from a every element that is in b (so a would become [a, b, x, c, z])
         int k;
-
+        // [ZP] very hard to understand
         for(String ll : b){
+        	//[ZP] warning
             List sublist = Arrays.asList(ll);
+            
             k = Collections.indexOfSubList(a, sublist);
             if (k > 0){
                 a.remove(k);

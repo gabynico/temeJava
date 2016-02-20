@@ -8,6 +8,9 @@ import java.util.TreeSet;
 /**
  * Created by ns on 2/6/2016.
  */
+//[ZP] i don't see the comparator
+//[ZP] where is the binarySearch
+//[ZP] 0
 public class SortedSetComparatorTest {
 
     public static void main(String[] args) {

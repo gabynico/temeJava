@@ -8,8 +8,11 @@ import java.lang.reflect.Method;
 /**
  * Created by ns on 2/4/2016.
  */
+//[ZP] p2 - 0 , you are not working with the given class, the class wasn't created with reflection
+//[ZP] p3 - 5 the hidden value is read but is not set again
 public class UnknownClass {
 
+	//[ZP] for fields declaration we are using java code style camelCase hiddenAttribute
     private int hidden_attribut;
 
     public void printValue() {
@@ -27,6 +30,9 @@ public class UnknownClass {
     }
 
 
+    //[ZP] very hard to read the code, to many try catch blocks
+    //[ZP] please solve the compilation warnings
+    
     public static void main(String[] args) {
         Class reflectClass = UnknownClass.class;
 
@@ -95,6 +101,7 @@ public class UnknownClass {
 
 
         String methodName = "returnStringValue";
+        //[ZP] this object should be created with reflection
         UnknownClass obj = new UnknownClass(11);
 
         Method privateMethod = null;

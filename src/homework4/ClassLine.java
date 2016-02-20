@@ -11,6 +11,7 @@ public class ClassLine implements  Cloneable{
         System.out.println( " Line:" );
     }
 
+    //[ZP] where is the deep copy??? see ZsoltTest
     public Object makeCopy() throws CloneNotSupportedException {
         Object o =  new Object();
         return o = super.clone();

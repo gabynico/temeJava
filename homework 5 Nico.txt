@@ -27,6 +27,7 @@ It is a class with many methods
 Can be obtained a synchronized version
 Can be retrieved with for loop and iterators
 Accessing methods like get() etc. are available
+[ZP] 10
 
 2.	There is a good practice in OO programming not to have public attributes.
 Think of a good reason why the designers of Java have broken this rule and have exposed the length attribute of arrays?
@@ -34,6 +35,7 @@ Think of a good reason why the designers of Java have broken this rule and have 
 see class PassingArrayToMethod
 Pentru a putea parcurge un array care este argument intr-o metoda.
 Pentru a putea adauga elemente intr-un array, daca este cazul si sa nu fie necesar sa se modifice codul initial scris.
+[ZP]
 
 3.	Which of the following are ordered collections and which ones are not:
 a.	HashSet
@@ -47,7 +49,7 @@ b. Yes. TreeSet: the elements are ordered using their natural ordering, or by a 
 c. No.
 d. No.
 e. Yes. LinkedList has an explicit ordering.
-
+[ZP] - 8
 4.	What is an Iterator? What is the difference between an Iterator and an Enumerator?
 #################Response:
 An iterator is an object that implements either the Iterator or the ListIterator interface.
@@ -57,7 +59,7 @@ ListIterator extends Iterator to allow bidirectional traversal of a list and the
 Enumerations (or enums) are a specification for a class where all instances of the class are created within the class.
 Enums are good to use when you already know all possibilities of the class.
 See class EnumerationTest.
-
+[ZP] 6 - not enum ci Enumeration;
 
 5.	What is the difference between Collections and Maps?
 #################Response:
@@ -65,7 +67,7 @@ A map is a collection that links a key to a value.
 Similar to how an array links an index to a value, a map links a key (one object) to a value (another object).
 Maps, like sets, cannot contain duplicates. This means each key can only exist once and can only link to a single value.
 Since Map is an interface, you must use one of the classes that implement Map such as HashMap to instantiate a map.
-
+[ZP] - 6 and the difference is?
 
 6.	Make a comparison between SoftReference and WeakReferences? 
 #################Response:
@@ -98,16 +100,16 @@ There are four kind of reference in Java :
                                                                                 to object created at line 3
     digit = null;
 
-
+[ZP] 10
 7.	How can you obtain a sychronized (thread-safe) version of a LinkedList?
 #################Response:
  LinkedList can be made synchronized explicitly by using Collections.synchronizedList method.
-
+[ZP] 10
 8.	What specific List would you chose as a container if you would have to perform random removals and wish for
 the best performance?
 #################Response:
 There is a requirement of frequent addition and deletion in application then LinkedList is a best choice.
-
+[ZP] 8 what about ArrayList
 
 	Problems
 
@@ -120,7 +122,7 @@ d.	finally removes from a every element that is in b (so a would become [a, b, x
 #################Done ->
 class ArrayListsTest
 
-
+[ZP] - 6
 2.	Create a class Country containing two attributes: Name and Capital, both Strings.
 Make it Comparable so that the comparison only cares about the country�s name.
 Fill an ArrayList with objects of your class.
@@ -130,7 +132,7 @@ Perform a binary search for the country whose capital is Paris using your second
 #################Done ->
 class SortedSetComparatorTest
 
-
+[ZP] 0
 3.	Write a program to implement a memory sensitive cache.
 #################Done ->
 Using the SoftReference Class
@@ -145,7 +147,7 @@ created/used soft reference first.
 
 See class CorrectSoftRef
 
-
+[ZP] 0
 
 4.	Write a program illustrating a �publish-subscribe� mechanism using a simple interface and and a Collection.
 #################Done ->

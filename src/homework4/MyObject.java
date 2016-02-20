@@ -1,5 +1,8 @@
 package homework4;
 
+import java.util.ArrayList;
+
+
 /**
  * Created by ns on 2/5/2016.
  */
@@ -10,6 +13,7 @@ public class MyObject implements Cloneable {
         i = ii;
     }
 
+    //[ZP] why the rename?
     public String toStringMy() {
         return Integer.toString(i);
     }

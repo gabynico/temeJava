@@ -9,7 +9,7 @@
  Downcasting is the casting from a general to a more specific type, i.e. casting down the hierarchy.
  Java permits an object of a subclass type to be treated as an object of any superclass type.
  This is called upcasting. Upcasting is done automatically, while downcasting must be manually done by the programmer.
-
+[ZP] 9
 2.	What is the difference between �traditional� RTTI and reflection?
 #################Response:
 By Run Time Type Identification (RTTI) we denote a mechanism to find the type of an object at run time.
@@ -28,7 +28,7 @@ Reflection
 - It is supported by the Class objects and the java.lang.reflect library.
 - It works by loading the appropriate Class object from a .class file, which must be available at run time (not compile time),
 either locally or through the network.
-
+[ZP] 10
 3.	Let there be the following code fragment: 
 public class Circle {}
 public class Shape extends Circle {}
@@ -49,7 +49,7 @@ c instanceof Shape -> false
 c.getClass() == Shape.class -> false
 c.isInstance(Shape)  -> false
 c.getClass() == Circle.class -> true
-
+[ZP] 10
 4.	Is it possible to build a valid line of Java code in a string and then execute it at run-time (Like in the sample below)?
 Write a short program to back-up your answer.
 String line = "someClass.method()"; 
@@ -59,6 +59,7 @@ Yes
 See class Test4
 see class UnknownClass:
     privateReturnVal = (String) privateMethod.invoke(obj, null);
+[ZP] 10
 
 	Problems:
 
@@ -104,12 +105,12 @@ It is possible to have multiple variables that refer to the same object.
 it's called aliasing.
 Code that involves aliasing can get confusing fast, and it can be very difficult to debug.
 In general, aliasing should be avoided or used with care.
-
+[ZP] 10
 
 2.	How do you send a message to an object?
 #################Response:
 Message Class
-
+[ZP] call a method
 
 3.	What �pass by value� means? Explain how passing arguments works in Java.
 #################Response:
@@ -119,7 +120,7 @@ Java will create a copy or copies of the values inside the original variable(s)
 and pass that to the method as arguments – and that is why it is called pass by value.
 The key with pass by value is that the method will not receive the actual variable that is being passed –
 but just a copy of the value being stored inside the variable.
-
+[ZP] 8
 
 
 4.	What is the difference between shallow copy and deep copy?
@@ -155,7 +156,7 @@ so in that case according to our need we can go for deep copy.
 - Deep copy is expensive as compare to shallow copy in terms of object creation, because it involves recursive copying of data from other mutable objects,
 which is part of original object.
 
-
+[ZP]10
 
 5.	What is wrong in the following code? 
 
@@ -172,7 +173,7 @@ public String toString() {
 }
 #################Response:
 see class MyObject
-
+[ZP] 8 
 
 6.	How many methods has the Cloneable interface? What are the reasons of this interface existence? -
 #################Response:
@@ -181,7 +182,7 @@ The Cloneable interface defines no members. It is used to indicate that a class 
 to be made.
 If you try to call clone( ) on a class that does not implement Cloneable, a CloneNotSupportedException is thrown.
  When a clone is made, the constructor for the object being cloned is not called. A clone is simply an exact copy of the original.
-
+[ZP] 10
 
 7.	Is C++ special keyword const available in Java? 
 #################Response:
@@ -190,7 +191,7 @@ Yes.
 The most likely reason why it's there is because it was inherited from C++. In the first version of Java,
 the language designers decided to reserve the word "const", with the idea of maybe implementing it in a later version of Java.
 But to date, it hasn't been implemented.
-
+[ZP] - 10
 
 8.	What is the difference between a read-only object and an immutable object? What is an immutable object?
 Give an example of a read-only class.
@@ -209,6 +210,7 @@ To create an immutable class following steps should be followed:
 -If the instance fields include references to mutable objects, don't allow those objects to be changed.
 
 See class ReadOnlyClass.
+[ZP] 10
 
 9.	What will be the results of the following code?
 public class StringUtil {

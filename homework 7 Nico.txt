@@ -19,20 +19,22 @@ in the directory indicated by this abstract pathname that satisfy the specified 
 c. Yes
 d. Yes
 
+[ZP] - 10
+
 2.	Which is the base class of decorators for classes having as base class the InputStream?
 #################Response: FilterInputStream
-
+[ZP] - 10
 3.	What is the main difference between PrintStream and DataOutputStream classes?
 #################Response:
 DataOutputStream outputs binary data. PrintStream prints character data.
 Use DataOutputStream when you want to store information. Use PrintStream when you want to display information.
-
+[ZP] - 10
 4.	Is it possible to do random access file using InputStream classes?
 #################Response:
 No.
 The Java.io.RandomAccessFile class file behaves like a large array of bytes stored in the file system.
 Instances of this class support both reading and writing to a random access file.
-
+[ZP] - 10
 5.	Check the next code snippet for correctness:
     // 1. Reading input by lines:
     BufferedReader in =
@@ -64,14 +66,14 @@ BufferedReader in =
             e.printStackTrace();
         }
 
-
+[ZP] - 10
 6.	Which class is used to add a new file to a zip archive? 
 #################Response: Class ZipOutputStream
-
+[ZP] - 10
 7.	How the serialization of a class can be customized in order to avoid the default serialization?
 #################Response:
 Your class must implement the Serializable or Externalizable interface to be serialized or deserialized.
-
+[ZP] 0 - and to avoid default serialization?????
 8.	What is the difference in the construction of a Serializable and an Externalizable object during the serialization?
 #################Response:
 Java takes care of the details of reading/writing a Serializable object from/to a stream. You just need to pass the
@@ -79,6 +81,7 @@ object to write/read to/from a stream to one of the methods of the stream classe
 Implementing the Externalizable interface gives you more control in reading and writing objects from/to a
 stream.
 
+[ZP] - and the difference is???
 
 9.	 What is weird in the next class:
 public class Account implements Externalizable {
@@ -105,11 +108,11 @@ The JVM serializes only instance variables that are not declared as transient.
 For an Externalizable object, you have full control over what pieces of data are serialized.
 See class Account, class AccountTest. Nu mai trebuie transient.
 sau e marcat id ca transient, dar nu mai este implementata interfata Externalizable
-
+[ZP] - 9 - transient is weired
 10.	With which kind of objects is working the StreamTokenizer class?
 #################Response:
 
-
+[ZP] 0 ????
 11.	Which of the following classes can produce a FileChannel:
 a. ByteArrayInputStream
 b. FileOutputStream
@@ -118,11 +121,11 @@ d. InputStreamReader
 e. FilterOutputStream
 #################Response:
 
-
+[ZP] 0 - b, c 
 12.	Can Reader and Writer character-mode classes interoperate with channels? How?
 #################Response:
 Yes
-
+[ZP] - and how
 13.	Make the appropriate changes to the code below to correctly copy a source file to a destination file and explain your changes.
 
 	FileChannel in = new FileInputStream(args[0]).getChannel();
@@ -135,7 +138,7 @@ Yes
 #################Response:
 See class CopyFileToDest
  flip()  sets the position to 0 (start), and limit to the position (previous position to be exact, or rather the end of useful input).
-
+[ZP] - 10
 14.	What is wrong in the code below:
     private static final int SIZE = 1024;
     private static final String FILE_NAME = "simpleFile.txt";
@@ -153,36 +156,37 @@ See class CopyFileToDest
     }
 Make the appropriate changes so that the code will correctly write and read the content of a simple file.
 #################Response:see class FileChannelSimple
-
+[ZP] - 10
 15. What is a View Buffer? Explain for what it should be used.
 #################Response:
 A "view buffer" allows you to look at an underlying ByteBuffer through the window of a particular primitive type.
 The ByteBuffer is still the actual storage that’s "backing" the view, so any changes you make to the view are reflected
 in modifications to the data in the ByteBuffer.
 
-
+[ZP] - 10
 
 Problems
 
 1.	Create a code to open a text file and read the file one line at a time.
 #################Done ->class ReadFileByLine
-
+[ZP] 10
 2.	Create an externalizable class called Account which contains an id and a password, the password is not serialized.
 #################Done ->class Account, class AccountTest
-
+[ZP] - 10
 3.	Write a program that compares the performance of writing the lines to a file when using buffered and
 unbuffered I/O both for writer and output stream classes.
 #################Done -> class BufferedAndUnbuffered
-
+[ZP] - 10
 4.	Write in a file 4 integers and then reread the third and fourth ones using random access to the file.
 #################Done -> class RandomAccessFileReadWrite
 
-
+[ZP] - 10
 5.	Read an arbitrary file, compress it to another file and display the compression ratio.
 #################Done -> class Compress
 
-
+[ZP] - 10
 6.	Write a program using nio features which reads the content of a file and generates a new file which contains all the words
 from the first file changed so that they have now the letters in the opposite order.
 EXample: I go home. will be transformed in I og emoh.
 #################Done -> see class WordsWithScanner
+[ZP] - 0
