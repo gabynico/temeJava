@@ -1,8 +1,5 @@
 package homework4;
 
-/**
- * Created by ns on 2/1/2016.
- */
 class Circle {
     private int r;
 }

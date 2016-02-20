@@ -3,9 +3,6 @@ package homework5;
 import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class CorrectSoftRef {
 
     public static void main(String[] args) {

@@ -3,9 +3,6 @@ package homework7;
 import java.io.*;
 import java.util.Date;
 
-/**
- * Created by ns on 2/12/2016.
- */
 public class BufferedAndUnbuffered {
 
     public static void main(String[] args) {
@@ -30,8 +27,6 @@ public class BufferedAndUnbuffered {
             System.out.println("OutputStream - Write file  buffered: " + time(buf) + "ms");
 
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

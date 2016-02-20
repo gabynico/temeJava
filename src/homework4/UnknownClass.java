@@ -45,7 +45,10 @@ public class UnknownClass {
             e.printStackTrace();
         }
 
-        Class[] constructParameters = constructor.getParameterTypes();
+        Class[] constructParameters = new Class[0];
+        if (constructor != null) {
+            constructParameters = constructor.getParameterTypes();
+        }
         for(Class parameter : constructParameters){
                 System.out.println(parameter.getName());
         }
@@ -54,11 +57,7 @@ public class UnknownClass {
         try {
             reflectObj = constructor.newInstance(6);
 
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e  ) {
             e.printStackTrace();
         }
 
@@ -69,31 +68,39 @@ public class UnknownClass {
             e.printStackTrace();
         }
 
-        privateAttributName.setAccessible(true);
+        if (privateAttributName != null) {
+            privateAttributName.setAccessible(true);
+        }
 
         int valueOfField = 0;
 
         try {
-            valueOfField = (int) privateAttributName.get(reflectObj);
+            if (privateAttributName != null) {
+                valueOfField = (int) privateAttributName.get(reflectObj);
+            }
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
 
 
-        System.out.println(new StringBuilder().append("Private attribut value: ").append(valueOfField).toString());
+        System.out.println("Private attribut value: " + valueOfField);
 
 
         try {
-            privateAttributName.setInt(reflectObj, 20);
+            if (privateAttributName != null) {
+                privateAttributName.setInt(reflectObj, 20);
+            }
 
-            valueOfField = (int) privateAttributName.get(reflectObj);
+            if (privateAttributName != null) {
+                valueOfField = (int) privateAttributName.get(reflectObj);
+            }
 
 
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
 
-        System.out.println(new StringBuilder().append("Private attribut value after change: ").append(valueOfField).toString());
+        System.out.println("Private attribut value after change: " + valueOfField);
 
 
 
@@ -106,21 +113,23 @@ public class UnknownClass {
 
         Method privateMethod = null;
         try {
-            privateMethod = UnknownClass.class.getDeclaredMethod(methodName, null);
+            privateMethod = UnknownClass.class.getDeclaredMethod(methodName);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 
         // Shuts down security allowing you to access private methods
-        privateMethod.setAccessible(true);
+        if (privateMethod != null) {
+            privateMethod.setAccessible(true);
+        }
 
-          // get the return value from the method
+        // get the return value from the method
         String privateReturnVal = null;
         try {
-            privateReturnVal = (String) privateMethod.invoke(obj, null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+            if (privateMethod != null) {
+                privateReturnVal = (String) privateMethod.invoke(obj);
+            }
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
 

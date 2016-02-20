@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
-/**
- * Created by ns on 2/12/2016.
- */
 public class Account implements Externalizable {
 
     private String id;

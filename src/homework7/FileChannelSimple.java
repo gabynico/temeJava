@@ -1,14 +1,11 @@
 package homework7;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-/**
- * Created by ns on 2/13/2016.
- */
+
 public class FileChannelSimple {
 
     private static final int SIZE = 1024;

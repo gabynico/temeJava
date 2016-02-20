@@ -17,15 +17,10 @@ public class Country {
         return nameContry;
     }
 
-    public void setNameContry(String nameContry) {
-        this.nameContry = nameContry;
-    }
 
     public String getCapital() {
         return capital;
     }
 
-    public void setCapital(String capital) {
-        this.capital = capital;
-    }
+
 }

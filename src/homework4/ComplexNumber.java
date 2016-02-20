@@ -4,6 +4,7 @@ package homework4;
  * Created by ns on 2/5/2016.
  */
 // immutable class
+//immutable class
 final class ComplexNumber {
 
 	// is not Java style to use "_" in property declaration. Our access

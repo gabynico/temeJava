@@ -1,8 +1,5 @@
 package homework1;
 
-/**
- * Created by ns on 1/26/2016.
- */
 public class Person2 {
 
 
@@ -28,7 +25,7 @@ public class Person2 {
 
 
 
-    public static void main (String[] args) throws java.lang.Exception
+    public static void main (String[] args)
     {
         // your code goes here
         Person2 p = new Person2("A","B", 22);

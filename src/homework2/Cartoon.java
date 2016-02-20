@@ -1,8 +1,5 @@
 package homework2;
 
-/**
- * Created by ns on 1/30/2016.
- */
 //: reusing/Cartoon.java
 // Constructor calls during inheritance.
 
@@ -18,10 +15,11 @@ public class Cartoon extends Drawing {
     //public Cartoon() { System.out.println("Cartoon constructor"); }
     public static void main(String[] args) {
         Cartoon x = new Cartoon();
+        System.out.println(x);
     }
 /* Output:
 Art constructor
 Drawing constructor
 Cartoon constructor
 */
-} //:~
+}

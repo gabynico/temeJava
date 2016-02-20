@@ -1,7 +1,6 @@
 package homework5;
 
 import java.util.Comparator;
-import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 

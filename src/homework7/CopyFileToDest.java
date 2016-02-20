@@ -4,9 +4,7 @@ import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-/**
- * Created by ns on 2/13/2016.
- */
+
 public class CopyFileToDest {
 
     private static final int SIZE = 1024;
@@ -23,8 +21,8 @@ public class CopyFileToDest {
     }
 
     public static void copy(String[] args) {
-        FileChannel in = null;
-        FileChannel out = null;
+        FileChannel in ;
+        FileChannel out ;
         ByteBuffer buffer = ByteBuffer.allocate(SIZE);
         try {
             in = new FileInputStream(args[0]).getChannel();
@@ -39,8 +37,6 @@ public class CopyFileToDest {
             in.close();
             out.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

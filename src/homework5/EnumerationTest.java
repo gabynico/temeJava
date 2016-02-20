@@ -3,9 +3,6 @@ package homework5;
 import java.util.Enumeration;
 import java.util.Vector;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class EnumerationTest {
 
     public static void main(String args[]) {

@@ -157,7 +157,8 @@ In exemplu de mai sus obiectul este initializat inainte de apelul metodei din co
 
 1.	Create an abstract class with no methods. Derive a class and add a method. Create a static method that takes a reference to the base class, downcasts it to the derived class, and calls the method. In main( ), demonstrate that it works. Now put the abstract declaration for the method in the base class, thus eliminating the need for the downcast.
 #################Done -> class AbstractClassDemo, AbstractClassDemo2
-2.	Create a base class with two methods. In the first method, call the second method. Inherit a class and override the second method. Create an object of the derived class, upcast it to the base type, and call the first method. Explain what happens.
+2.	Create a base class with two methods. In the first method, call the second method. Inherit a class and override the second method.
+Create an object of the derived class, upcast it to the base type, and call the first method. Explain what happens.
 #################Done -> class BaseClass, InheritClass
 3.	Consider the folowing code:
 	B b = new B();

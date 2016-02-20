@@ -2,9 +2,6 @@ package homework7;
 
 import java.io.*;
 
-/**
- * Created by ns on 2/12/2016.
- */
 public class AccountTest {
 
     public static void main(String[] args) {
@@ -16,7 +13,7 @@ public class AccountTest {
 
         // The output file
         File fileObjectOut = new File( "src" + File.separator + "homework7" + File.separator + "account_test_serializable.txt");
-        FileOutputStream fileOutputStream = null;
+        FileOutputStream fileOutputStream ;
         try {
 
             fileOutputStream = new FileOutputStream(fileObjectOut);
@@ -29,15 +26,13 @@ public class AccountTest {
 
             fileOutputStream.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         // The input file
         File fileObjectIn = new File("src" + File.separator + "homework7" + File.separator + "account_test_serializable.txt");
-        FileInputStream fileInputStream = null;
+        FileInputStream fileInputStream;
         try {
             fileInputStream = new FileInputStream(fileObjectIn);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
@@ -56,11 +51,7 @@ public class AccountTest {
             System.out.println(a7);
             System.out.println(a8);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
 

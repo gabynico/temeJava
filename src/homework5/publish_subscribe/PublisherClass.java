@@ -2,9 +2,6 @@ package homework5.publish_subscribe;
 
 import java.util.ArrayList;
 
-/**
- * Created by ns on 2/6/2016.
- */
 public class PublisherClass implements PublisherInterface {
 
     private ArrayList<SubscriberInterface> subscribers;
@@ -13,7 +10,7 @@ public class PublisherClass implements PublisherInterface {
     private double val2;
 
     public PublisherClass() {
-        this.subscribers = new ArrayList<SubscriberInterface>();
+        this.subscribers = new ArrayList<>();
     }
 
     @Override

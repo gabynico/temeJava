@@ -1,11 +1,7 @@
 package homework6;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by ns on 2/7/2016.
- */
 public class NonGenericsVsGenerics {
 
     public void meth_generic(ArrayList<String> l){

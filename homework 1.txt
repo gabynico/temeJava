@@ -183,4 +183,7 @@ For example, if the object represents an open file, that file should be closed b
 #################Done -> class StaticClass, StaticClass2
 Note:
 Static Java fields are located in the class, not in the instances of the class.
-Static blocks are nothing but a normal block of code, enclosed in braces { }, preceded with static keyword. These static blocks will be called when JVM loads the class into memory. Incase a class has multiple static blocks across the class, then JVM combines all these blocks as a single block of code and executes it. Static blocks will be called only once, when it is loaded into memory. These are also called initialization blocks.
+Static blocks are nothing but a normal block of code, enclosed in braces { }, preceded with static keyword.
+These static blocks will be called when JVM loads the class into memory.
+Incase a class has multiple static blocks across the class, then JVM combines all these blocks as a single block of code and executes it.
+Static blocks will be called only once, when it is loaded into memory. These are also called initialization blocks.

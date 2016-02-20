@@ -1,8 +1,5 @@
 package homework2;
 
-/**
- * Created by ns on 1/26/2016.
- */
 public class Frog extends Amphibian{
     @Override
     protected void m1() {
@@ -11,8 +8,10 @@ public class Frog extends Amphibian{
     }
 
     public static void main(String[] args) {
-        Frog f = new Frog();
-        Amphibian a = (Amphibian)f;
+//        Frog f = new Frog();
+//        Amphibian a = f;
+
+        Amphibian a = new Frog();
         a.m1();
     }
 }

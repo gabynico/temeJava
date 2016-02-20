@@ -34,8 +34,8 @@ public class ArrayListsTest {
 
         //    b.	merges b into a in an interleaved fashion (so if a=[a,b,c] and b=[w,x,y,z], then a becomes [a, w, b, x, c, y, z])
         //[ZP] why array, you should use methods from ArrayList
-        String[] a_array = a.toArray(new String[0]);
-        String[] b_array = b.toArray(new String[0]);
+        String[] a_array = a.toArray(new String[a.size()]);
+        String[] b_array = b.toArray(new String[b.size()]);
 
         ArrayList<String> c = new ArrayList<>();
 
@@ -62,7 +62,7 @@ public class ArrayListsTest {
         c.addAll(b);
         //    c.	removes every second element from b (so b would become [w,y])
         // [ZP] what about iterators????
-        for(String l : c){
+        for(String ignored : c){
             if (j%2 == 0) {
             	//[ZP] too complicated. Just you can understand this.
                 b.remove(j -1 - cnt_remove );

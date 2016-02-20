@@ -1,8 +1,8 @@
 package homework6;
 
-/**
- * Created by ns on 2/7/2016.
- */
+
+import java.util.ArrayList;
+
 public class GenericClassMethod <T> {
 
     private T ref;
@@ -10,6 +10,18 @@ public class GenericClassMethod <T> {
     public GenericClassMethod(T ref) {
         this.ref = ref;
     }
+
+//    public void genericMethod1(E ref) {
+//        E f;
+//        f = ref;
+//    }
+
+    public void genericMethod2(ArrayList<Object> list) {
+        for(Object l : list){
+            System.out.print( l);
+        }
+    }
+
     public T get() {
         return ref;
     }
