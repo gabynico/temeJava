@@ -1,0 +1,116 @@
+-------------------------------------
+	Concurrency
+-------------------------------------
+
+
+	Questions
+
+
+1.	How can you create a thread?
+#################Response:
+Creating and using a thread in Java is as simple as creating an object of the Thread class and using that object in a program.
+Creating an object of the Thread class allocates memory for that object on the heap.
+It does not start or run the thread.
+After you have created an object of the Thread class, you must call its start() method to start the thread represented by that object.
+There are three ways you can specify your code to be executed by a thread:
+• By inheriting your class from the Thread class
+• By implementing the Runnable interface in your class
+• By using the method reference to a method that takes no parameters and returns void
+
+2.	Can a program terminate in case some of its threads are still running?
+#################Response:
+Yes and No.
+
+When application is running, it firstly execute the main() method runs in a one thread, called the main thread.
+If no other threads are created by the main thread, then program terminates when the main() method complete its execution.
+The main thread creates some other threads called child threads.
+The main() method execution can finish, but the program will keep running until the all threads have complete its execution.
+
+Java makes a distinction between a user thread and another type of thread known as a daemon thread.
+The difference between these two types of threads is that
+if the JVM determines that the only threads running in an application are daemon threads,
+the Java runtime closes down the application. On the other hand, if at least one user thread is alive,
+the Java runtime won't terminate your application.
+
+3.	How can you wait for another thread to complete?
+#################Response:
+a. Join
+A thread can execute a thread join to wait until the other thread terminates.
+
+In general, thread join is for a parent to join with one of its child threads.
+Thread join has the following activities, assuming that a parent thread P wants to join with one of its child threads C.
+-When P executes a thread join in order to join with C, which is still running,
+P is suspended until C terminates. Once C terminates, P resumes.
+-When P executes a thread join and C has already terminated,
+P continues as if no such thread join has ever executed (i.e., join has no effect).
+A parent thread may join with many child threads created by the parent
+
+b. syncronized
+
+c. Explicit locking mechanism can be used to coordinate access to shared resources in a multi-threaded environment
+   without using the keyword synchronized. The Lock interface, which is declared in the java.util.concurrent.locks
+   package, defines the explicit locking operations. The ReentrantLock class, in the same package, is the concrete
+   implementation of the Lock interface.
+
+4.	Which lock is shared by two synchronized methods of a class?
+#################Response:
+
+
+5.	Which are the reasons for a thread to be blocked?
+#################Response:
+
+
+6.	How can you stop a thread?
+#################Response:
+public void suspend()
+This method puts a thread in suspended state and can be resumed using resume() method.
+public void stop()
+This method stops a thread completely.
+public void wait()
+Causes the current thread to wait until another thread invokes the notify().
+
+7.	Which are the differences between wait and sleep?
+#################Response:
+sleep() is a method which is used to hold the process for few seconds or the time you wanted
+but in case of wait() method thread goes in waiting state and it won’t come back automatically until we call the notify() or notifyAll().
+The major difference is that wait() releases the lock or monitor while sleep() doesn’t releases any lock or monitor while waiting.
+Wait is used for inter-thread communication while sleep is used to introduce pause on execution, generally.
+
+8.	Which are the differences between wait and calling a synchronized method (or entering a synchronized block)?
+#################Response:
+
+
+9.	How can you stop a thread from waiting?
+#################Response:
+wait() method thread goes in waiting state and it won’t come back automatically until we call the notify() or notifyAll().
+
+10.	What is a race condition?
+#################Response:
+A race condition is a situation in which two or more threads or processes are reading or writing some shared data,
+and the final result depends on the timing of how the threads are scheduled.
+Race conditions can lead to unpredictable results and subtle program bugs.
+A thread can prevent this from happening by locking an object.
+When an object is locked by one thread and another thread tries to call a synchronized method on the same object,
+the second thread will block until the object is unlocked.
+
+
+
+	Problems
+
+
+1.	Create an example where there are two synchronized sections in a class and they still can be run in parallel.
+Done -> SynchronizedBlocksParallel, SynchronizedBlocksParallelA, SynchronizedBlocksParallelB, SynchronizedBlocksParallelTest
+
+2.	Prove that the example Restaurant does not work correctly in case there is more than one waiter in the restaurant
+Done ->
+
+3.	Solve a single producer, single consumer problem using wait( ) and notify( ).
+The producer must not overflow the receiver's buffer, which can happen if the producer is faster than the consumer.
+If the consumer is faster than the producer, then it must not read the same data more than once.
+Do not assume anything about the relative speeds of the producer or consumer.
+Done ->ProducerConsumerTest, Producer, Consumer, Buffer
+
+4.	Modify Restaurant.java so that multiple WaitPersons generate order requests to multiple Chefs,
+who produce orders and notify the WaitPerson who generated the request.
+You'll need to use queues for both incoming order requests and outgoing orders.
+Done ->
