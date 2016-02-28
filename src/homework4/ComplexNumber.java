@@ -8,12 +8,15 @@ final class ComplexNumber {
 
 	// is not Java style to use "_" in property declaration. Our access
 	// modifiers can resolve this problem.
-	private int _realValue;
-	private int _imgValue;
+//	private int _realValue;
+//	private int _imgValue;
+
+	private int realValue;
+	private int imgValue;
 
 	public ComplexNumber(int realValue, int imgValue) {
-		this._realValue = realValue;
-		this._imgValue = imgValue;
+		this.realValue = realValue;
+		this.imgValue = imgValue;
 	}
 
 	// public final int getRealValue() {
@@ -36,7 +39,7 @@ final class ComplexNumber {
 	// }
 
 	public MutableCompanionComplex makeMutable() {
-		return new MutableCompanionComplex(_realValue, _imgValue);
+		return new MutableCompanionComplex(this.realValue, this.imgValue);
 	}
 
 	public static ComplexNumber calc(ComplexNumber z) {
@@ -53,7 +56,7 @@ final class ComplexNumber {
 		ComplexNumber z = new ComplexNumber(1, 0);
 		ComplexNumber resp = calc(z);
 
-		System.out.println(resp._realValue + " + i * " + resp._imgValue);
+		System.out.println(resp.realValue + " + i * " + resp.imgValue);
 	}
 }
 

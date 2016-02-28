@@ -7,22 +7,40 @@
 
 
 1.	Describe the steps that should be followed in order to create a JUnit test to test a given class.
+#################Response:
+Define instance variables that store the state.
+Initialize by overriding setUp() method.
+Clean-Up after a test by overriding tearDown() method.
+Here if we run application, it will show whether the test cases have passed or not.
+
 2.	Explain how can one run a single test in the static way. Give a small example.
+#################Response:
+
 3.	What should be done in a Unit test class to be sure that all the test methods can be run by a simple main call?
+#################Response:
 
 4.	How can one define properties to be used in Ant build files? How can the properties be used in the value of task attributes?
+#################Response:
+
 5.	Explain the Ant path-like structures.
+#################Response:
 
 6.	Explain how can the default log4j initialization procedure be used.
-7.	How can you get the “root” logger?
-8.	What types of configuration files are supported by log4j? Which are the configurators available for each supported type?
+#################Response:
 
+7.	How can you get the ï¿½rootï¿½ logger?
+#################Response:
+
+8.	What types of configuration files are supported by log4j? Which are the configurators available for each supported type?
+#################Response:
 
 
 	Problems
 
 
-1.	Create a Triangle class. The class attributes represent the length of the triangle’s sides. The class is able to determine the type of the triangle: scalene, isosceles and equilateral.  Write a unit test that you feeel adequately to test this class.
+1.	Create a Triangle class. The class attributes represent the length of the triangleï¿½s sides.
+The class is able to determine the type of the triangle: scalene, isosceles and equilateral.
+Write a unit test that you feeel adequately to test this class.
 
 2.	Create a simple test project containing the following modules:
 - common - place in this module a class responsible to initialize log4j and to hide the log4j details from all other project code
