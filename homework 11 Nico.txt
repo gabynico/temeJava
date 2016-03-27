@@ -1,0 +1,35 @@
+-------------------------------------
+	RMI
+-------------------------------------
+
+	Questions
+
+1.	Which is the basic difference between the RPC (Remote Procedure Call) and RMI?
+RPC (Remote Procedure Call) and RMI (Remote Method Invocation) are two mechanisms that allow the user to invoke or call processes
+that will run on a different computer from the one the user is using. The main difference between the two is the approach or paradigm used.
+RMI uses an object oriented paradigm where the user needs to know the object and the method of the object he needs to invoke.
+In comparison, RPC isn’t object oriented and doesn’t deal with objects. Rather, it calls specific subroutines that are already established.
+
+2.	Which is the difference between the methods Naming.bind and Naming.rebind?
+Naming.bind - cannot be raplace later
+Naming.rebind - can be replace later
+
+3.	Is it possible to start programmatically the registry? If yes, which is the difference between starting it manually and starting it programmatically?
+4.	If the client of an RMI object is on another machine then where the object, the stub and skeleton code will run?
+Pe Client: interface, stub class and client program.
+Pe server: interface, implemented class server program, stub class and skeleton class
+
+5.	What is wrong in the next remote interface definition:
+	public interface PerfectTimeI extends Remote {
+  	     long getPerfectTime();
+        }
+Orice metoda din interfata care extinde Remote interface trebuie sa aiba:
+  throws RemoteException
+
+	Problems
+
+1.	Write a code snippet for a client side lookup of an arbitrary remote interface.
+See RMI package.
+
+2.	Write the remote interface and the implementation class for a remote object which provides the possibility to authorize a user
+using an id and a password, also provide the registration code of the remote object. The authorization should succeed always for simplicity.

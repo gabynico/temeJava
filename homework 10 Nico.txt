@@ -1,0 +1,42 @@
+-------------------------------------
+	Network programming
+-------------------------------------
+
+	Questions
+
+1.	Explain the following concepts: server, client, internet address, port and socket.
+The machine that “stays in one place” is called the server, and the one that seeks is called the client.
+This distinction is important only while the client is trying to connect to the server.
+Once they’ve connected, it becomes a two-way communication process and it doesn’t matter anymore that one happened
+to take the role of server and the other happened to take the role of the client.
+The InetAddress is what you use to refer to the particular machine.
+Port: a unique place within the machine
+The socket is the software abstraction used to represent the “terminals” of a connection between two machines.
+
+2.	Write a short program to get the IP address of the local host.
+class MachineName
+
+3.	What is a stream? Explain and give a short example (java code) of working with sockets as stream.
+
+4.	Write a small server that listens on a port supplied as a parameter in the command line, and exits once a client connects.
+5.	How can you treat multiple clients in a Socket based distributed application?
+6.	What is the difference between TCP and UDP? Give examples of when to use TCP and when UDP. Name java classes that we must use in order
+to work with TCP, respectively with UDP.
+
+
+
+	Problems
+
+
+1.	Write a simple distributed application with a server and a single client that sends lines of text (from the user input) to the server,
+and the server returns the reversed line back to the client (where it must be displayed).
+2.	Write a distributed application with a server and multiple clients that implements the following communication protocol:
+Client: �ping�
+Server: �pong�
+Client: �who�s there?�
+Server: �I am the server�
+Server: �who are you?�
+Client: �I am the client�
+3.	Write a chat program that supports multiple clients (all clients can see all messages).
+4.	Write an application that allows remote computers to get the atomic time from a time server.
+Bonus: implement a mechanism to determine the delays in the network.
